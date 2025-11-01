@@ -105,7 +105,7 @@
                 <div class="row justify-content-center mb-30-none">
                     <div class="col-xl-6 col-lg-6 mb-30">
                         <div class="about-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/about-two.png')}}" alt="about">
+                            <img src="{{asset('assets/images/aviation/about_page/about-two.png')}}" alt="about">
                             <div class="about-element-two" data-aos="fade-up" data-aos-duration="1200">
                                 <img src="{{asset('assets/images/element/element-15.png')}}" alt="element">
                             </div>
@@ -187,7 +187,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">01</span>
                             <h3 class="title">Leading private aviation</h3>
@@ -199,7 +199,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">02</span>
                             <h3 class="title">Tailored memberships</h3>
@@ -210,7 +210,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">03</span>
                             <h3 class="title">Leading safety & privacy</h3>
@@ -221,7 +221,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">04</span>
                             <h3 class="title">Client ratings & reviews</h3>
@@ -232,7 +232,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">05</span>
                             <h3 class="title">Exceptional service</h3>
@@ -243,7 +243,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="choose-item">
                             <div class="choose-thumb">
-                                <img src="{{asset('assets/images/choose.png')}}" alt="choose">
+                                <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">06</span>
                             <h3 class="title">Faster & smarter response</h3>
@@ -262,7 +262,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Statistics
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="statistics-section bg-overlay-black ptb-120 bg_img" data-background="assets/images/bg/bg-2.png">
+        <section class="statistics-section bg-overlay-black ptb-120 bg_img" data-background="{{asset('assets/images/aviation/home_page/jet/jet4.png')}}">
             <div class="container">
                 <div class="statistics-area">
                     <div class="row mb-30-none">
@@ -332,7 +332,7 @@
                 <div class="history-area">
                     <div class="history-item">
                         <div class="history-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/history/history-1.png')}}" alt="history">
+                            <img src="{{asset('assets/images/aviation/about_page/history/history-1.png')}}" alt="history">
                         </div>
                         <div class="history-content" data-aos="fade-left" data-aos-duration="1200">
                             <h2 class="year">2012</h2>
@@ -343,7 +343,7 @@
                     </div>
                     <div class="history-item">
                         <div class="history-thumb" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/history/history-2.png')}}" alt="history">
+                            <img src="{{asset('assets/images/aviation/about_page/history/history-2.png')}}" alt="history">
                         </div>
                         <div class="history-content" data-aos="fade-right" data-aos-duration="1200">
                             <h2 class="year">2016</h2>
@@ -354,7 +354,7 @@
                     </div>
                     <div class="history-item">
                         <div class="history-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/history/history-3.png')}}" alt="history">
+                            <img src="{{asset('assets/images/aviation/about_page/history/history-3.png')}}" alt="history">
                         </div>
                         <div class="history-content" data-aos="fade-left" data-aos-duration="1200">
                             <h2 class="year">2018</h2>
@@ -365,7 +365,7 @@
                     </div>
                     <div class="history-item">
                         <div class="history-thumb" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/history/history-4.png')}}" alt="history">
+                            <img src="{{asset('assets/images/aviation/about_page/history/history-4.png')}}" alt="history">
                         </div>
                         <div class="history-content" data-aos="fade-right" data-aos-duration="1200">
                             <h2 class="year">202X</h2>
@@ -412,7 +412,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-item">
                                         <div class="team-thumb">
-                                            <{{asset('img src="assets/images/team/team-1.png')}}" alt="team">
+                                            <img src = "{{asset('assets/images/aviation/about_page/team/team-1.png')}}" alt="team">
                                         </div>
                                         <div class="team-content">
                                             <h3 class="title"><a href="team-details.html">Kelvine Pitterson</a></h3>
@@ -431,7 +431,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-item">
                                         <div class="team-thumb">
-                                            <img src="{{asset('assets/images/team/team-2.png')}}" alt="team">
+                                            <img src="{{asset('assets/images/aviation/about_page/team/team-2.png')}}" alt="team">
                                         </div>
                                         <div class="team-content">
                                             <h3 class="title"><a href="team-details.html">Robin Hilson</a></h3>
@@ -450,7 +450,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-item">
                                         <div class="team-thumb">
-                                            <img src="{{asset('assets/images/team/team-3.png')}}" alt="team">
+                                            <img src="{{asset('assets/images/aviation/about_page/team/team-3.png')}}" alt="team">
                                         </div>
                                         <div class="team-content">
                                             <h3 class="title"><a href="team-details.html">Alex Moure</a></h3>
@@ -648,7 +648,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-5 mb-30">
                         <div class="faq-thumb" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/faq.png')}}" alt="faq">
+                            <img src="{{asset('assets/images/aviation/about_page/faq/faq.png')}}" alt="faq">
                         </div>
                     </div>
                 </div>

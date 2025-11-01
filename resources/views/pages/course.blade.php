@@ -8,7 +8,7 @@
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
+            data-background="{{asset('assets/images/bg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
@@ -116,7 +116,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-1.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-1.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 399.00</span>
                                 </div>
@@ -140,7 +140,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-2.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-2.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 299.00</span>
                                 </div>
@@ -164,7 +164,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-3.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-3.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 499.00</span>
                                 </div>
@@ -188,7 +188,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-1.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-1.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 199.00</span>
                                 </div>
@@ -212,7 +212,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-2.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-2.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 599.00</span>
                                 </div>
@@ -236,7 +236,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="course-item">
                             <div class="course-thumb">
-                                <img src="assets/images/course/course-3.png" alt="course">
+                                <img src="{{asset('assets/images/aviation/course_page/course/course-3.png')}}" alt="course">
                                 <div class="course-prize">
                                     <span>$ 699.00</span>
                                 </div>

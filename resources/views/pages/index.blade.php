@@ -571,7 +571,7 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="book-form-section ptb-120">
             <div class="container">
-                <div class="book-form-area bg-overlay-black bg_img" data-background="assets/images/bg/bg-3.png">
+                <div class="book-form-area bg-overlay-black bg_img" data-background="{{asset('assets/images/aviation/home_page/bgimg/bgimg1.png')}}">
                     <div class="row justify-content-center">
                         <div class="col-xl-12 text-center">
                             <div class="section-header white">
@@ -669,7 +669,7 @@
                                 <div class="swiper-slide">
                                     <div class="package-item">
                                         <div class="package-thumb">
-                                            <img src="{{asset('assets/images/package/package-9.png')}}" alt="package">
+                                            <img src="{{asset('assets/images/aviation/home_page/package/1.png')}}" alt="package">
                                             <div class="package-prize">
                                                 <span>$115.00</span>
                                             </div>
@@ -703,7 +703,7 @@
                                 <div class="swiper-slide">
                                     <div class="package-item">
                                         <div class="package-thumb">
-                                            <img src="assets/images/package/package-10.png" alt="package">
+                                            <img src="{{asset('assets/images/aviation/home_page/package/2.png')}}" alt="package">
                                             <div class="package-prize">
                                                 <span>$110.00</span>
                                             </div>
@@ -737,7 +737,7 @@
                                 <div class="swiper-slide">
                                     <div class="package-item">
                                         <div class="package-thumb">
-                                            <img src="{{asset('assets/images/package/package-11.png')}}" alt="package">
+                                            <img src="{{asset('assets/images/aviation/home_page/package/3.png')}}" alt="package">
                                             <div class="package-prize">
                                                 <span>$120.00</span>
                                             </div>
@@ -964,7 +964,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="blog-item">
                             <div class="blog-thumb">
-                                <img src="{{asset('assets/images/blog/blog-1.png')}}" alt="blog">
+                                <img src="{{asset('assets/images/aviation/home_page/blog/blog-1.png')}}" alt="blog">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-post-meta">
@@ -984,7 +984,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="blog-item">
                             <div class="blog-thumb">
-                                <img src="{{asset('assets/images/blog/blog-2.png')}}" alt="blog">
+                                <img src="{{asset('assets/images/aviation/home_page/blog/blog-2.png')}}" alt="blog">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-post-meta">
@@ -1004,7 +1004,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                         <div class="blog-item">
                             <div class="blog-thumb">
-                                <img src="{{asset('assets/images/blog/blog-3.png')}}" alt="blog">
+                                <img src="{{asset('assets/images/aviation/home_page/blog/blog-3.png')}}" alt="blog">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-post-meta">

@@ -7,7 +7,7 @@
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
+            data-background="{{asset('assets/images/bg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
@@ -39,9 +39,9 @@
                 <div class="row justify-content-center align-items-center mb-30-none">
                     <div class="col-xl-6 col-lg-6 mb-30">
                         <div class="about-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="assets/images/about-three.png" alt="about">
+                            <img src="{{asset('assets/images/about-three.png')}}" alt="about">
                             <div class="about-element-two" data-aos="fade-up" data-aos-duration="1200">
-                                <img src="assets/images/element/element-15.png" alt="element">
+                                <img src="{{asset('assets/images/element/element-15.png')}}" alt="element">
                             </div>
                         </div>
                     </div>
@@ -164,17 +164,17 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="gallery-item">
-                                        <img src="assets/images/gallery/gallery-1.png" alt="gallery">
+                                        <img src="{{asset('assets/images/gallery/gallery-1.png')}}" alt="gallery">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="gallery-item">
-                                        <img src="assets/images/gallery/gallery-4.png" alt="gallery">
+                                        <img src="{{asset('assets/images/gallery/gallery-4.png')}}" alt="gallery">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="gallery-item">
-                                        <img src="assets/images/gallery/gallery-3.png" alt="gallery">
+                                        <img src="{{asset('assets/images/gallery/gallery-3.png')}}" alt="gallery">
                                     </div>
                                 </div>
                             </div>
@@ -200,10 +200,10 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="service-section ptb-120">
             <div class="service-element-one">
-                <img src="assets/images/element/element-16.png" alt="element">
+                <img src="{{asset('assets/images/element/element-16.png')}}" alt="element">
             </div>
             <div class="service-element-two">
-                <img src="assets/images/element/element-17.png" alt="element">
+                <img src="{{asset('assets/images/element/element-17.png')}}" alt="element">
             </div>
             <div class="container">
                 <div class="row justify-content-center">
@@ -234,7 +234,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-4 col-md-4 col-sm-12 mb-30">
                         <div class="service-thumb text-center">
-                            <img src="assets/images/plane.png" alt="plane">
+                            <img src="{{asset('assets/images/plane.png')}}" alt="plane">
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 mb-30">
@@ -266,7 +266,7 @@
         Start Interior
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="interior-section pt-120">
-            <div class="interior-element bg-overlay-black bg_img" data-background="assets/images/bg/bg-6.png"></div>
+            <div class="interior-element bg-overlay-black bg_img" data-background="{{asset('assets/images/bg/bg-6.png')}}"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 text-center">
@@ -290,7 +290,7 @@
                                 tech</p>
                         </div>
                         <div class="interior-thumb">
-                            <img src="assets/images/interior/interior-1.png" alt="interior">
+                            <img src="{{asset('assets/images/interior/interior-1.png')}}" alt="interior">
                         </div>
                     </div>
                     <div class="interior-area flex-row-reverse">
@@ -304,7 +304,7 @@
                             </p>
                         </div>
                         <div class="interior-thumb">
-                            <img src="assets/images/interior/interior-2.png" alt="interior">
+                            <img src="{{asset('assets/images/interior/interior-2.png')}}" alt="interior">
                         </div>
                     </div>
                 </div>
