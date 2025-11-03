@@ -72,7 +72,7 @@
                     <div class="container-fluid">
                         <div class="header-menu-content">
                             <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation/logo1.png')}}"
                                         alt="site-logo" width= "200px" height="200px"></a>
                                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -173,7 +173,7 @@
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                    <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation/logo1.png')}}"
                                             alt="site-logo" height-="200px" width = "200px"></a>
                                 </div>
                                 <p>Flynext was founded in 1991 by a group of safety-focused professionals who created
