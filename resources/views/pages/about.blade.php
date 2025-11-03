@@ -6,7 +6,7 @@
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
+            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
@@ -508,7 +508,7 @@
                                         <div class="client-footer">
                                             <div class="client-post-meta">
                                                 <div class="user-thumb">
-                                                    <img src="{{asset('assets/images/user.png')}}" alt="user">
+                                                    <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
                                                 </div>
                                                 <span class="name">Jhon Abraham</span>
                                             </div>
@@ -535,7 +535,7 @@
                                         <div class="client-footer">
                                             <div class="client-post-meta">
                                                 <div class="user-thumb">
-                                                    <img src="assets/images/user.png" alt="user">
+                                                    <img src="assets/images/aviation/home_page/client/4.png" alt="user">
                                                 </div>
                                                 <span class="name">Mark John</span>
                                             </div>
@@ -562,7 +562,7 @@
                                         <div class="client-footer">
                                             <div class="client-post-meta">
                                                 <div class="user-thumb">
-                                                    <img src="{{asset('assets/images/user.png')}}" alt="user">
+                                                    <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
                                                 </div>
                                                 <span class="name">James Walton</span>
                                             </div>

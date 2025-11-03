@@ -1,5 +1,3 @@
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
 @extends('layout.master')
 
 @section('css')
@@ -24,67 +22,6 @@
     }
   }
 
-  .banner-section {
-    position: relative;
-    padding: 120px 0 80px;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(211,168,79,0.3) 100%), 
-                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200') center/cover no-repeat;
-    overflow: hidden;
-  }
-
-  .banner-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(211,168,79,0.1) 70%);
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .banner-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
-  }
-
-  .banner-title {
-    font-size: 56px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
-
-  .breadcrumb {
-    background: transparent;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .breadcrumb-item {
-    font-size: 16px;
-  }
-
-  .breadcrumb-item a {
-    color: #d3a84f;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .breadcrumb-item a:hover {
-    color: #fff;
-  }
-
-  .breadcrumb-item.active {
-    color: #fff;
-  }
-
-  .breadcrumb-item + .breadcrumb-item::before {
-    color: #d3a84f;
-  }
 
   .facility-section {
     padding: 100px 0;
@@ -391,23 +328,32 @@
 
 @section('content')
 <!-- Banner Section -->
-<section class="banner-section">
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-xl-12 text-center">
-        <div class="banner-content">
-          <h1 class="banner-title">Our Facilities</h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Facility</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+ <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Banner
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="banner-section inner-banner-section bg-overlay-black bg_img"
+            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-12 text-center">
+                        <div class="banner-content">
+                            <h1 class="title">Our Courses</h1>
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        End Banner
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!-- Facility Section -->
 <section class="facility-section">

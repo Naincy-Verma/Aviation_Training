@@ -72,8 +72,8 @@
                     <div class="container-fluid">
                         <div class="header-menu-content">
                             <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/logo.png')}}"
-                                        alt="site-logo"></a>
+                                <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                        alt="site-logo" width= "200px" height="200px"></a>
                                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -163,7 +163,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Footer
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <footer class="footer-section section--bg pt-120">
+        <footer class="footer-section section--bg pt-60">
             <div class="footer-element" data-aos="fade-left" data-aos-duration="1200">
                 <img src="{{asset('assets/images/element/element-1.png')}}" alt="element">
             </div>
@@ -173,8 +173,8 @@
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/logo.png')}}"
-                                            alt="site-logo"></a>
+                                    <a class="site-logo site-title" href="index.html"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                            alt="site-logo" height-="200px" width = "200px"></a>
                                 </div>
                                 <p>Flynext was founded in 1991 by a group of safety-focused professionals who created
                                     The Wingman Standard for rigorously vetting air charter operators.</p>

@@ -48,64 +48,7 @@
     50% { transform: scale(1.05); }
   }
 
-  .banner-section {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(211, 168, 79, 0.3)), 
-                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600') center/cover no-repeat;
-    padding: 180px 0 120px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .banner-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(211, 168, 79, 0.2) 0%, transparent 60%);
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  .banner-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
-  }
-
-  .banner-content .title {
-    font-size: 72px;
-    font-weight: 800;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .breadcrumb {
-    background: transparent;
-  }
-
-  .breadcrumb-item a {
-    color: #d3a84f;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .breadcrumb-item a:hover {
-    color: #fff;
-    transform: translateX(5px);
-  }
-
-  .breadcrumb-item.active {
-    color: #fff;
-  }
-
-  .breadcrumb-item + .breadcrumb-item::before {
-    color: #d3a84f;
-  }
+ 
 
   .admission-section {
     padding: 100px 0;
@@ -487,26 +430,32 @@
 @endsection
 
 @section('content')
-<!-- Banner Section -->
-<section class="banner-section">
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-xl-10 text-center">
-        <div class="banner-content">
-          <h1 class="title">Admission</h1>
-          <div class="breadcrumb-area mt-4">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Admission</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Banner
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="banner-section inner-banner-section bg-overlay-black bg_img"
+            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-12 text-center">
+                        <div class="banner-content">
+                            <h1 class="title">Our Courses</h1>
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        End Banner
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!-- Admission Section -->
 <section class="admission-section">

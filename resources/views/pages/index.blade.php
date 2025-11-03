@@ -6,7 +6,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="banner-section">
+        <section class="banner-section" style="padding-top:150px; padding-bottom:110px;">
             <div class="banner-element" data-aos="fade-left" data-aos-duration="1200">
                 <img src="{{asset('assets/images/element/element-1.png')}}" alt="element">
             </div>
@@ -814,7 +814,7 @@
                                                         <img src="{{asset('assets/images/client/quote.png')}}" alt="client">
                                                     </div>
                                                     <div class="client-thumb">
-                                                        <img src="{{asset('assets/images/client/client-3.png')}}" alt="client">
+                                                        <img src="{{asset('assets/images/aviation/home_page/client/1.png')}}" alt="client">
                                                     </div>
                                                 </div>
                                                 <div class="client-content">
@@ -845,7 +845,7 @@
                                                         <img src="{{asset('assets/images/client/quote.png')}}" alt="client">
                                                     </div>
                                                     <div class="client-thumb">
-                                                        <img src="{{asset('assets/images/client/client-4.png')}}" alt="client">
+                                                        <img src="{{asset('assets/images/aviation/home_page/client/2.png')}}" alt="client">
                                                     </div>
                                                 </div>
                                                 <div class="client-content">
@@ -875,7 +875,7 @@
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="client-right-thumb">
-                                <img src="{{asset('assets/images/client/client-big.png')}}" alt="client">
+                                <img src="{{asset('assets/images/aviation/home_page/client/client-big.png')}}" alt="client">
                                 <div class="client-thumb-overlay">
                                     <div class="video-main">
                                         <div class="promo-video">

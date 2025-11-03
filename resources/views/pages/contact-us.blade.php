@@ -6,7 +6,7 @@
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
+            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
