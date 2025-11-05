@@ -3543,7 +3543,9 @@ section {
   padding-right: 200px;
   background-color: #19232d;
   overflow: hidden;
-  z-index: 9;
+  z-index: 9; 
+  padding-top: 150px; 
+  padding-bottom: 110px;
 }
 @media only screen and (max-width: 1199px) {
   .banner-section .row {

@@ -96,21 +96,18 @@
                                             </ul> -->
                                         </li>
 
-                                        <!-- Admission -->
-                                         <li><a href="{{url('/admissions')}}">Admissions</a></li>
-
                                          <!-- Facility -->
-                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facility</a>
+                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facilities</a>
                                             <!-- <ul class="sub-menu">
                                                 <li><a href="{{url('/course-details')}}">test1</a></li>
                                                 <li><a href="{{url('/course-details')}}">test2 </a></li>
                                             </ul> -->
                                         </li>
-
+                                        <li class="menu_has_children"><a href="{{url('/gallery')}}">Work With Us</a>
+                                        </li>
                                         <!-- Gallery-->
                                         <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a>
                                         </li>
-                                    
                                         <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                     </ul>
                                     <div class="header-right">
@@ -239,13 +236,13 @@
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
                             <div class="footer-widget">
-                                <h4 class="title">About us</h4>
+                                <h4 class="title">Useful Links</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">About us</a></li>
-                                    <li><a href="#0">News & press</a></li>
-                                    <li><a href="#0">Blog</a></li>
-                                    <li><a href="#0">FAQs</a></li>
-                                    <li><a href="#0">Careers</a></li>
+                                    <li><a href="{{url('/about')}}">About us</a></li>
+                                    <li><a href="{{url('/course')}}">Courses</a></li>
+                                    <li><a href="{{url('/facility')}}">Facilities</a></li>
+                                    <li><a a href="{{url('/about')}}">FAQs</a></li>
+                                    <li><a a href="{{url('/about')}}">Careers</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -6,7 +6,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="banner-section" style="padding-top:150px; padding-bottom:110px;">
+        <section class="banner-section" >
             <div class="banner-element" data-aos="fade-left" data-aos-duration="1200">
                 <img src="{{asset('assets/images/element/element-1.png')}}" alt="element">
             </div>
