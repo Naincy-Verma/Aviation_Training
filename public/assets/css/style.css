@@ -7517,6 +7517,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 */
 .course-section {
   overflow: hidden;
+  background-color: #e8e8e8;
 }
 
 .course-slider-wrapper {

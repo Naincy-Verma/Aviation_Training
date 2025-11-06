@@ -72,7 +72,7 @@
                     <div class="container-fluid">
                         <div class="header-menu-content">
                             <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/newimages/logo/header.png')}}"
                                         alt="site-logo" width= "200px" height="200px"></a>
                                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -89,7 +89,7 @@
                                         <li><a href="{{url('/about')}}">About Us</a></li>
     
                                         <!-- Course -->
-                                        <li class="menu_has_children"><a href="{{url('/course')}}">Courses</a>
+                                        <li class="menu_has_children"><a href="{{url('/courses')}}">Courses</a>
                                             <!-- <ul class="sub-menu">
                                                 <li><a href="{{url('/course-details')}}">test1</a></li>
                                                 <li><a href="{{url('/course-details')}}">test2 </a></li>
@@ -170,7 +170,7 @@
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation/logo1.png')}}"
+                                    <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/newimages/logo/footer.png')}}"
                                             alt="site-logo" height-="200px" width = "200px"></a>
                                 </div>
                                 <p>Flynext was founded in 1991 by a group of safety-focused professionals who created
@@ -241,7 +241,7 @@
                                     <li><a href="{{url('/about')}}">About us</a></li>
                                     <li><a href="{{url('/course')}}">Courses</a></li>
                                     <li><a href="{{url('/facility')}}">Facilities</a></li>
-                                    <li><a a href="{{url('/about')}}">FAQs</a></li>
+                                    <li><a a href="{{url('/faq')}}">FAQs</a></li>
                                     <li><a a href="{{url('/about')}}">Careers</a></li>
                                 </ul>
                             </div>

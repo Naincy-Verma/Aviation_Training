@@ -163,101 +163,101 @@
         End Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
           Gallery Section Start 
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section class="gallery-section">
-  <div class="container-fluid">
-    <div class="section-label">OUR GALLERY</div>
-    <h2 class="section-title">Checkout our flights & travel photos</h2>
-    
-    <div class="row">
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/1.jpg')}}" alt="Business travelers">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
+    <section class="gallery-section">
+      <div class="container-fluid">
+        <div class="section-label">OUR GALLERY</div>
+        <h2 class="section-title">Checkout our flights & travel photos</h2>
+        
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/1.jpg')}}" alt="Business travelers">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/2.png')}}" alt="Luxury jet interior">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/3.jpg')}}" alt="Traveler boarding">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/4.jpg')}}" alt="Passengers relaxing">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/5.jpg')}}" alt="Flight attendant">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="{{asset('assets/images/aviation/gallery_aviation/6.jpg')}}" alt="Aviation crew">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600" alt="Private jet boarding">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" alt="Luxury car at airport">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600" alt="View from plane">
+              <div class="gallery-overlay">
+                <div class="plus-icon"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/2.png')}}" alt="Luxury jet interior">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/3.jpg')}}" alt="Traveler boarding">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/4.jpg')}}" alt="Passengers relaxing">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/5.jpg')}}" alt="Flight attendant">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="{{asset('assets/images/aviation/gallery_aviation/6.jpg')}}" alt="Aviation crew">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600" alt="Private jet boarding">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" alt="Luxury car at airport">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600" alt="View from plane">
-          <div class="gallery-overlay">
-            <div class="plus-icon"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Gallery Section End 
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    </section>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Gallery Section End 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  Popup container 
