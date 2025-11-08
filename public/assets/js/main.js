@@ -247,7 +247,7 @@ var swiper = new Swiper('.client-slider', {
 });
 
 var swiper = new Swiper('.client-slider-two', {
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 30,
   centeredSlides: true,
   loop: true,
