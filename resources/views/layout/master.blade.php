@@ -103,7 +103,7 @@
                                                 <li><a href="{{url('/course-details')}}">test2 </a></li>
                                             </ul> -->
                                         </li>
-                                        <li class="menu_has_children"><a href="{{url('/gallery')}}">Work With Us</a>
+                                        <li class="menu_has_children"><a href="{{url('/work-with-us')}}">Work With Us</a>
                                         </li>
                                         <!-- Gallery-->
                                         <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a>

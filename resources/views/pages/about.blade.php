@@ -157,7 +157,7 @@
                             <p>Charter an entire jet, or offer the seats you don’t need through our app a need for full
                                 or even fractional jet ownership</p>
                             <div class="about-footer-btn">
-                                <a href="contact.html" class="btn--base">Request More Info <i
+                                <a href="#" class="btn--base">Request More Info <i
                                         class="icon-Group-2361 ml-2"></i></a>
                             </div>
                         </div>
