@@ -1,6 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleHasPermissionController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\HighlightController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CoursePhaseController;
+use App\Http\Controllers\CourseEligibilityController;
+use App\Http\Controllers\SelectionProcessController;
+use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\CareerController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -16,3 +30,64 @@ Route::view('/gallery', 'pages.gallery');
 Route::view('/contact-us', 'pages.contact-us');
 Route::view('/work-with-us', 'pages.work-with-us');
 Route::view('/faq', 'pages.faq');
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Login Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('admin/login', [LoginController::class, 'showLoginForm'])->name('admin.login');
+Route::post('admin/login', [LoginController::class, 'login'])->name('admin.login.submit');
+Route::post('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+Route::middleware(['auth:employee', 'role:Admin'])->group(function () {
+
+    // Admin Dashboard
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    // Employees Routes
+    Route::resource('employees', EmployeeController::class);
+
+    // Roles Routes
+    Route::resource('roles', RoleController::class);
+
+    // Permissions Routes
+    Route::resource('permissions', PermissionController::class);
+
+    // Role-Permission Routes
+    Route::get('role-permissions', [RoleHasPermissionController::class, 'index'])->name('role-permissions.index');
+    Route::get('role-permissions/{role_id}/edit', [RoleHasPermissionController::class, 'edit'])->name('role-permissions.edit');
+    Route::put('role-permissions/{role_id}', [RoleHasPermissionController::class, 'update'])->name('role-permissions.update');
+
+     // About us Routes
+    Route::resource('about', AboutUsController::class);
+
+     // Why Vihanga Routes
+    Route::resource('highlights', HighlightController::class);
+
+     // Why Vihanga Routes
+    Route::resource('courses', CourseController::class);
+
+    // Course Phases Routes
+    Route::resource('course_phases', CoursePhaseController::class);
+
+    // Course Eligibilities Routes
+    Route::resource('course_eligibilities', CourseEligibilityController::class);
+
+    // Selection Processes Routes
+    Route::resource('selection_processes', SelectionProcessController::class);
+
+       //Facilities Routes
+    Route::resource('facilities', FacilityController::class);
+
+    // Careers Routes
+    Route::resource('careers', CareerController::class);
+
+
+});

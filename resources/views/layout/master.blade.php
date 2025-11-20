@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Charter Flight & Aviation School HTML Template</title>
+    <title>Vihanga Avition Training</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,7 +37,12 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
         @yield('css')
-
+    <style>
+        .modal-backdrop.show {
+        /* opacity: .5; */
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -82,38 +87,26 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav main-menu ml-auto">
                                         <!-- Home -->
-                                        <li class="menu_has_children"><a href="{{url('/')}}">Home</a>
-                                        </li>
-
+                                        <li class="menu_has_children"><a href="{{url('/')}}">Home</a></li>
                                         <!-- About Us -->
                                         <li><a href="{{url('/about')}}">About Us</a></li>
-    
                                         <!-- Course -->
-                                        <li class="menu_has_children"><a href="{{url('/courses')}}">Courses</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="{{url('/course-details')}}">test1</a></li>
-                                                <li><a href="{{url('/course-details')}}">test2 </a></li>
-                                            </ul> -->
-                                        </li>
-
-                                         <!-- Facility -->
-                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facilities</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="{{url('/course-details')}}">test1</a></li>
-                                                <li><a href="{{url('/course-details')}}">test2 </a></li>
-                                            </ul> -->
-                                        </li>
-                                        <li class="menu_has_children"><a href="{{url('/work-with-us')}}">Work With Us</a>
-                                        </li>
+                                        <li class="menu_has_children"><a href="{{url('/courses')}}">Courses</a> </li>
+                                        <!-- Facility -->
+                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facilities</a> </li>
                                         <!-- Gallery-->
-                                        <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a>
+                                        <li class="menu_has_children"><a href="#0">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu_has_children"><a href="{{url('/gallery')}}">Work With Us</a></li>
+                                                <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a></li>
+                                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                                            </ul>
                                         </li>
-                                        <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                     </ul>
                                     <div class="header-right">
                                         <div class="search-bar d-none d-lg-block">
-                                            <a href="#0"><i class="fas fa-search"></i></a>
-                                            <div class="header-top-search-area">
+                                            <!-- <a href="#0"><i class="fas fa-search"></i></a> -->
+                                            <!-- <div class="header-top-search-area">
                                                 <form class="header-search-form"
                                                     action="https://gamblingscript.com/search" method="GET">
                                                     <input type="search" name="keyword" id="header_search"
@@ -121,14 +114,66 @@
                                                     <button class="header-search-btn"><i
                                                             class="fas fa-search"></i></button>
                                                 </form>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="header-action-area">
-                                            <a href="service-details.html" class="action-btn two"><i
-                                                    class="icon-btn-icon"></i></a>
+                                            <a href="#" class="action-btn two" data-toggle="modal" data-target="#exampleModal">
+                                                <i class="icon-btn-icon"></i>
+                                            </a>
                                             <div class="header-action">
-                                                <a href="service-details.html" class="btn--base"><i
-                                                        class="icon-btn-icon"></i> Book Now</a>
+                                                <a href="#" class="btn--base" data-toggle="modal" data-target="#exampleModal">
+                                                    <i class="icon-btn-icon"></i> Book Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Book Now Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-dark" id="exampleModalLabel">Book Your Aviation Training Session</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="contact-form-area">
+                                                        <form class="contact-form">
+                                                            <div class="row justify-content-center mb-20-none">
+                                                                <div class="col-xl-6 col-lg-6 form-group">
+                                                                    <label class="icon"><i class="icon-name_icone"></i></label>
+                                                                    <input type="text" class="form--control" name="name" placeholder="Name" required="">
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6 form-group">
+                                                                    <label class="icon"><i class="las la-envelope"></i></label>
+                                                                    <input type="email" class="form--control" name="email" placeholder="Email" required="">
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6 form-group">
+                                                                    <label class="icon"><i class="icon-call_icone"></i></label>
+                                                                    <input type="number" class="form--control" name="phone" placeholder="Phone" required="">
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6 form-group">
+                                                                    <div class="contact-select">
+                                                                        <select class="form--control" style="display: none;">
+                                                                            <option value="1">Subject</option>
+                                                                            <option value="2">Subject one</option>
+                                                                            <option value="3">Subject two</option>
+                                                                        </select><div class="nice-select form--control" tabindex="0"><span class="current">Subject</span><ul class="list"><li data-value="1" class="option selected">Subject</li><li data-value="2" class="option">Subject one</li><li data-value="3" class="option">Subject two</li></ul></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12 form-group">
+                                                                    <label class="icon"><i class="icon-massage"></i></label>
+                                                                    <textarea class="form--control" placeholder="Message" required=""></textarea>
+                                                                </div>
+                                                                <div class="col-lg-12 form-group">
+                                                                    <button type="submit" class="btn--base mt-10">Submit Now <i class="icon-Group-2361 ml-2"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>  
+                                                </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +201,69 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
     @yield('content')
-
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Call-widget
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="call-widget-wrapper">
+            <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +1 814 929
+                    4263</span> <span class="arrow"></span></button>
+            <div class="call-widget-form-area">
+                <form class="book-form">
+                    <div class="row justify-content-center mb-20-none">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                            <div class="book-select">
+                                <label>From</label>
+                                <div class="book-form-icon">
+                                    <i class="icon-from-airplane"></i>
+                                </div>
+                                <select class="book-select form--control">
+                                    <option value="dhaka" selected>Dhaka</option>
+                                    <option value="london">London</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                            <div class="book-select">
+                                <label>To</label>
+                                <div class="book-form-icon">
+                                    <i class="icon-to-airplane"></i>
+                                </div>
+                                <select class="book-select form--control">
+                                    <option value="london" selected>London</option>
+                                    <option value="dhaka">Dhaka</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                            <div class="book-select">
+                                <label>Date</label>
+                                <div class="book-form-icon">
+                                    <i class="icon-schedule-icon"></i>
+                                </div>
+                                <select class="book-select form--control">
+                                    <option value="25/12/2021" selected>25/12/2021</option>
+                                    <option value="30/12/2021">30/12/2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                            <label>Passenger</label>
+                            <div class="book-quantity">
+                                <div class="book-plus-minus">
+                                    <div class="dec qtybutton">-</div>
+                                    <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                                    <div class="inc qtybutton">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 form-group">
+                            <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Book
+                                Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Footer
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -167,70 +274,32 @@
             <div class="container">
                 <div class="footer-top-area">
                     <div class="row align-items-end mb-30-none">
+                      
+                    </div>
+                </div>
+                <div class="footer-bottom-area">
+                    <div class="row mb-30-none">
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
                                     <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/newimages/logo/footer.png')}}"
                                             alt="site-logo" height-="200px" width = "200px"></a>
                                 </div>
-                                <p>Flynext was founded in 1991 by a group of safety-focused professionals who created
-                                    The Wingman Standard for rigorously vetting air charter operators.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="widget-title">EUROPE</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">Europe 45 Gloucester Road</a></li>
-                                    <li><a href="#0">London DT1M 3BF</a></li>
-                                    <li><a href="#0">+44 (0)20 3671 5709</a></li>
-                                </ul>
+                                <p>
+                                    Vihanga Aviation Training is a premier institute dedicated to developing skilled aviation professionals. 
+                                    Our programs emphasize safety, discipline, and excellence to help students soar in their aviation careers.
+                                </p>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
-                                <h4 class="widget-title">ASIA & PACIFIC</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">2473 Red Road Ste 98</a></li>
-                                    <li><a href="#0">Singapore SG</a></li>
-                                    <li><a href="#0">+ 1 623 211 6319</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="widget-title">NORTH AMERICA</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">Europe 45 Gloucester Road</a></li>
-                                    <li><a href="#0">London DT1M 3BF</a></li>
-                                    <li><a href="#0">+44 (0)20 3671 5709</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom-area">
-                    <div class="row mb-30-none">
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
                                 <h4 class="title">Get started</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">Private jet</a></li>
-                                    <li><a href="#0">Register</a></li>
-                                    <li><a href="#0">Current Jet Deals</a></li>
-                                    <li><a href="#0">Flynext mobile app</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">How it works</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">How it works</a></li>
-                                    <li><a href="#0">Ways to fly</a></li>
-                                    <li><a href="#0">Ways to buy</a></li>
-                                    <li><a href="#0">Private charter</a></li>
-                                    <li><a href="#0">Private Jet Cost</a></li>
+                                    <li><a href="{{url('/about')}}">About us</a></li>
+                                    <li><a href="{{url('/course')}}">Courses</a></li>
+                                    <li><a href="{{url('/facility')}}">Facilities</a></li>
+                                     <li><a a href="{{url('/')}}">Work With Us</a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -238,18 +307,20 @@
                             <div class="footer-widget">
                                 <h4 class="title">Useful Links</h4>
                                 <ul class="footer-list">
-                                    <li><a href="{{url('/about')}}">About us</a></li>
-                                    <li><a href="{{url('/course')}}">Courses</a></li>
-                                    <li><a href="{{url('/facility')}}">Facilities</a></li>
+                                    <li><a a href="{{url('/')}}">Advantages</a></li>
+                                    <li><a a href="{{url('/gallery')}}">Gallery</a></li>
                                     <li><a a href="{{url('/faq')}}">FAQs</a></li>
-                                    <li><a a href="{{url('/about')}}">Careers</a></li>
+                                    <li><a a href="{{url('/contact-us')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <h4 class="title">Newsletter</h4>
-                                <p>Flynext was founded in 1991 by a group of safety-focused professionals erators.</p>
+                                    <p>
+                                        Stay updated with the latest news, training sessions, and aviation events from 
+                                        Vihanga Aviation Training. Subscribe to our newsletter today!
+                                    </p>
                                 <form class="subscribe-form">
                                     <label class="subscribe-icon"><i class="las la-envelope"></i></label>
                                     <input type="text" class="form--control" placeholder="Enter Email">
@@ -263,13 +334,13 @@
                 <div class="copyright-area">
                     <div class="social-area">
                         <ul class="footer-social">
-                            <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="active"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                         </ul>
                     </div>
-                    <p>© 2024 Fly Next Airlines. All rights reserved.</p>
+                    <p>© {{ date('Y') }} Vihanga Aviation Academy. All rights reserved.</p>
                 </div>
             </div>
         </footer>

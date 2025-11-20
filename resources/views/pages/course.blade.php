@@ -123,7 +123,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Private Pilot License (PPL)</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Private Pilot License (PPL)</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 45 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -131,7 +131,7 @@
                                         airplane pilots get big discounts on</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Commercial Pilot License</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Commercial Pilot License</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 35 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -155,7 +155,7 @@
                                         developed privately in the early 1950s</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Multi-Engine IFR Rating</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Multi-Engine IFR Rating</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 40 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -179,7 +179,7 @@
                                         unique ability to buy individual seats.</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Private Pilot License (PPL)</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Private Pilot License (PPL)</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 30 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -203,7 +203,7 @@
                                         aviation company</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
@@ -219,7 +219,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Commercial Pilot License</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Commercial Pilot License</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 25 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -227,7 +227,7 @@
                                         for full or even fractional jet ownership</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                             </div>
                             <div class="course-content">
                                 <div class="course-content-header">
-                                    <h3 class="title"><a href="course-details.html">Multi-Engine IFR Rating</a></h3>
+                                    <h3 class="title"><a href="{{url('/courses-details')}}">Multi-Engine IFR Rating</a></h3>
                                     <span class="time"><i class="las la-clock"></i> 20 Hours</span>
                                 </div>
                                 <div class="course-content-body">
@@ -251,7 +251,7 @@
                                         leisure, XO Membership also delivers</p>
                                 </div>
                                 <div class="course-content-footer">
-                                    <a href="course-details.html" class="btn--base">Enroll Now <i
+                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
                                             class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>

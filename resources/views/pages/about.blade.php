@@ -3,183 +3,166 @@
 
     <div class="page-wrapper"></div>
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
-            <div class="container-fluid">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-xl-12 text-center">
-                        <div class="banner-content">
-                            <h1 class="title">About-Us</h1>
-                            <div class="breadcrumb-area">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">About-Us</li>
-                                    </ol>
-                                </nav>
+            Start Banner
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <section class="banner-section inner-banner-section bg-overlay-black bg_img"
+                data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
+                <div class="container-fluid">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-12 text-center">
+                            <div class="banner-content">
+                                <h1 class="title">About-Us</h1>
+                                <div class="breadcrumb-area">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">About-Us</li>
+                                        </ol>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          call section 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="call-widget-wrapper">
+                <button type="button" class="call-widget-btn">
+                    <span class="num"><i class="icon-call-icon"></i> +91 98765 43210</span>
+                    <span class="arrow"></span>
+                </button>
 
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Call-widget
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <div class="call-widget-wrapper">
-            <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +1 814 929
-                    4263</span> <span class="arrow"></span></button>
-            <div class="call-widget-form-area">
-                <form class="book-form">
-                    <div class="row justify-content-center mb-20-none">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>From</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-from-airplane"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="dhaka" selected>Dhaka</option>
-                                    <option value="london">London</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>To</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-to-airplane"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="london" selected>London</option>
-                                    <option value="dhaka">Dhaka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>Date</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-schedule-icon"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="25/12/2021" selected>25/12/2021</option>
-                                    <option value="30/12/2021">30/12/2021</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
-                            <label>Passenger</label>
-                            <div class="book-quantity">
-                                <div class="book-plus-minus">
-                                    <div class="dec qtybutton">-</div>
-                                    <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
-                                    <div class="inc qtybutton">+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 form-group">
-                            <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Book
-                                Now</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Call-widget
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start About
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="about-section about--style page-wrapper-two ptb-120">
-            <div class="container">
-                <div class="row justify-content-center mb-30-none">
-                    <div class="col-xl-6 col-lg-6 mb-30">
-                        <div class="about-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/aviation/about_page/about-two.png')}}" alt="about">
-                            <div class="about-element-two" data-aos="fade-up" data-aos-duration="1200">
-                                <img src="{{asset('assets/images/element/element-15.png')}}" alt="element">
-                            </div>
-                            <div class="about-video-wrapper">
-                                <div class="video-main">
-                                    <div class="promo-video">
-                                        <div class="waves-block">
-                                            <div class="waves wave-1"></div>
-                                            <div class="waves wave-2"></div>
-                                            <div class="waves wave-3"></div>
-                                        </div>
+                <div class="call-widget-form-area">
+                    <form class="book-form">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>Training Location</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-from-airplane"></i>
                                     </div>
-                                    <a class="video-icon" data-rel="lightcase:myCollection"
-                                        href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                        <i class="fas fa-play"></i>
-                                    </a>
+                                    <select class="book-select form--control">
+                                        <option selected>Hyderabad</option>
+                                        <option>Bangalore</option>
+                                        <option>Mumbai</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>Course Type</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-to-airplane"></i>
+                                    </div>
+                                    <select class="book-select form--control">
+                                        <option selected>Cabin Crew</option>
+                                        <option>Ground Staff</option>
+                                        <option>Airport Management</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>Preferred Start Date</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-schedule-icon"></i>
+                                    </div>
+                                    <select class="book-select form--control">
+                                        <option selected>10/11/2025</option>
+                                        <option>20/11/2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                                <label>Number of Students</label>
+                                <div class="book-quantity">
+                                    <div class="book-plus-minus">
+                                        <div class="dec qtybutton">-</div>
+                                        <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                                        <div class="inc qtybutton">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base w-100 mt-10">
+                                    <i class="icon-btn-icon"></i> Enroll Now
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start About
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <section class="about-section about--style page-wrapper-two ptb-80">
+                <div class="container">
+                    <div class="row justify-content-center mb-30-none">
+                        <div class="col-xl-6 col-lg-6 mb-30">
+                            <div class="about-thumb" data-aos="fade-right" data-aos-duration="1200">
+                                <img src="{{asset('assets/images/aviation/about_page/about-two.png')}}" alt="about">
+                                <div class="about-element-two" data-aos="fade-up" data-aos-duration="1200">
+                                    <img src="{{asset('assets/images/element/element-15.png')}}" alt="element">
+                                </div>
+                                <div class="about-video-wrapper">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <a class="video-icon" data-rel="lightcase:myCollection"
+                                            href="https://www.youtube.com/embed/Hw4ctvV25H0">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 mb-30">
-                        <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
-                            <span class="sub-title text--base">About us</span>
-                            <h2 class="title">Private Jet Charters save your
-                                time and give more comfort</h2>
-                            <p>XO is not simply a private jet service. Whether you’re traveling for business or leisure,
-                                XO Membership also delivers insider access to unique experiences, exclusive amenities
-                            </p>
-                            <div class="about-book-area">
-                                <div class="about-book-element">
-                                    <img src="{{asset('assets/images/element/element-7.png')}}" alt="element">
+                        <div class="col-xl-6 col-lg-6 mb-30">
+                            <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
+                                <span class="sub-title text--base">About us</span>
+                                <h2 class="title">Building Future Aviation Professionals with Excellence</h2>
+                                <p>Vihanga Aviation Training is a premier institute dedicated to shaping skilled and confident aviation professionals. 
+                                    We offer world-class training programs in Cabin Crew, Ground Staff, and Airport Management — blending theory, 
+                                    hands-on learning, and personality development to prepare our students for a successful career in the aviation industry.
+                                </p>
+                                <div class="about-book-area">
+                                    <div class="about-book-element">
+                                        <img src="{{asset('assets/images/element/element-7.png')}}" alt="element">
+                                    </div>
+                                    <div class="about-book-left">
+                                        <h3 class="call-title">Call for Admissions</h3>
+                                        <span class="call"><a href="tel:+91 814929 4263">+91 814 929 4263</a></span>
+                                    </div>
+                                    <div class="about-book-right">
+                                        <a href="{{url('/')}}" class="btn--base"><i class="icon-btn-icon-v2"></i>
+                                            Book Now</a>
+                                    </div>
                                 </div>
-                                <div class="about-book-left">
-                                    <h3 class="call-title">Call for book an order</h3>
-                                    <span class="call"><a href="tel:8-800-10-500">8-800-10-500</a></span>
-                                </div>
-                                <div class="about-book-right">
-                                    <a href="service-details.html" class="btn--base"><i class="icon-btn-icon-v2"></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                            <div class="about-list-area">
-                                <ul class="about-list">
-                                    <li><i class="fas fa-check"></i> Private Jet</li>
-                                    <li><i class="fas fa-check"></i> Business Jet</li>
-                                    <li><i class="fas fa-check"></i> Air Ambulance</li>
-                                </ul>
-                            </div>
-                            <p>Charter an entire jet, or offer the seats you don’t need through our app a need for full
-                                or even fractional jet ownership</p>
-                            <div class="about-footer-btn">
-                                <a href="#" class="btn--base">Request More Info <i
-                                        class="icon-Group-2361 ml-2"></i></a>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End About
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+            </section>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Choose
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="choose-section bg--gray ptb-120">
+           WHY Choose Us
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="choose-section bg--gray ptb-80">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-12 text-center">
                         <div class="section-header">
                             <span class="sub-title"><span>Why Us</span></span>
-                            <h2 class="section-title">Why Choose Our Flynext?</h2>
+                            <h2 class="section-title">Why Choose Vihanga Aviation Training?</h2>
                         </div>
                     </div>
                 </div>
@@ -190,10 +173,8 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">01</span>
-                            <h3 class="title">Leading private aviation</h3>
-                            <p>As well as getting to fly to many different
-                                destinations as part of their job, airplane
-                                pilots get big discounts on</p>
+                            <h3 class="title">Expert Flight Instructors</h3>
+                            <p>Our experienced and certified flight instructors provide personalized training with hands-on expertise to guide you through every step of your aviation journey.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -202,9 +183,8 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">02</span>
-                            <h3 class="title">Tailored memberships</h3>
-                            <p>Charter an entire jet, or offer the seats you don’t need through our app a need for full
-                                or even fractional jet ownership</p>
+                            <h3 class="title">Modern Aircraft Fleet</h3>
+                            <p>Train with our well-maintained, modern fleet of aircraft equipped with latest avionics and safety features for comprehensive pilot training experience.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -213,9 +193,8 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">03</span>
-                            <h3 class="title">Leading safety & privacy</h3>
-                            <p>XO is not simply a private jet service. Whether you’re traveling for business or leisure,
-                                XO Membership also delivers</p>
+                            <h3 class="title">DGCA Approved Training</h3>
+                            <p>We are a DGCA approved flying training organization offering structured courses that meet international aviation standards and regulatory requirements.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -224,9 +203,8 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">04</span>
-                            <h3 class="title">Client ratings & reviews</h3>
-                            <p>Search the world with ease and transparency.As the only tech-forward private aviation
-                                company</p>
+                            <h3 class="title">Flexible Training Programs</h3>
+                            <p>From Private Pilot License (PPL) to Commercial Pilot License (CPL), we offer customized training schedules designed to fit your career goals and timeline.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -235,9 +213,8 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">05</span>
-                            <h3 class="title">Exceptional service</h3>
-                            <p>Our technology consistently delivers the best pricing for charters – and the unique
-                                ability to buy individual seats.</p>
+                            <h3 class="title">High Safety Standards</h3>
+                            <p>Safety is our top priority with rigorous maintenance protocols, comprehensive pre-flight checks, and strict adherence to aviation safety regulations.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -246,406 +223,147 @@
                                 <img src="{{asset('assets/images/aviation/about_page/choose.png')}}" alt="choose">
                             </div>
                             <span class="num">06</span>
-                            <h3 class="title">Faster & smarter response</h3>
-                            <p>The first small jet-powered civil aircraft was the Morane-Saulnier MS.760 Paris,
-                                developed privately in the early 1950s</p>
+                            <h3 class="title">Career Placement Support</h3>
+                            <p>We provide career guidance and placement assistance to help our graduates secure positions with leading airlines and aviation companies across India.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Choose
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Statistics
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="statistics-section bg-overlay-black ptb-120 bg_img" data-background="{{asset('assets/images/aviation/home_page/jet/jet4.png')}}">
-            <div class="container">
-                <div class="statistics-area">
-                    <div class="row mb-30-none">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                            <div class="statistics-item">
-                                <div class="statistics-content">
-                                    <div class="odo-area">
-                                        <h3 class="odo-title odometer" data-odometer-final="95">0</h3>
-                                    </div>
-                                    <p>Professional Pilots</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                            <div class="statistics-item">
-                                <div class="statistics-content">
-                                    <div class="odo-area">
-                                        <h3 class="odo-title odometer" data-odometer-final="68">0</h3>
-                                    </div>
-                                    <p>Jet Airplanes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                            <div class="statistics-item">
-                                <div class="statistics-content">
-                                    <div class="odo-area">
-                                        <h3 class="odo-title odometer" data-odometer-final="290">0</h3>
-                                    </div>
-                                    <p>World Airports</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                            <div class="statistics-item" data-aos="zoom-in" data-aos-duration="1200">
-                                <div class="statistics-content">
-                                    <div class="odo-area">
-                                        <h3 class="odo-title odometer" data-odometer-final="195">0</h3>
-                                    </div>
-                                    <p>Directions</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Statistics
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start History
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="history-section bg--gray ptb-120">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-12 text-center">
-                        <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-                            <span class="sub-title"><span>Our History</span></span>
-                            <h2 class="section-title">What Make Us Special</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="history-area">
-                    <div class="history-item">
-                        <div class="history-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/aviation/about_page/history/history-1.png')}}" alt="history">
-                        </div>
-                        <div class="history-content" data-aos="fade-left" data-aos-duration="1200">
-                            <h2 class="year">2012</h2>
-                            <h3 class="title">The First Private Jet</h3>
-                            <p>The Morane-Saulnier MS.760 Paris had a gross weight of 7,650 pounds (3.47 t), initially
-                                powered by two Turboméca Marboré turbojets of 880 pounds-force (3.9 kN) thrust.</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-thumb" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/aviation/about_page/history/history-2.png')}}" alt="history">
-                        </div>
-                        <div class="history-content" data-aos="fade-right" data-aos-duration="1200">
-                            <h2 class="year">2016</h2>
-                            <h3 class="title">The Gulfstream Era</h3>
-                            <p>The Lockheed JetStar, designed to meet USAF UCX requirements and seating ten passengers
-                                and two crew, first flew on 4 September 1957. A total of 204 aircraft (20.2 t) </p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-thumb" data-aos="fade-right" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/aviation/about_page/history/history-3.png')}}" alt="history">
-                        </div>
-                        <div class="history-content" data-aos="fade-left" data-aos-duration="1200">
-                            <h2 class="year">2018</h2>
-                            <h3 class="title">The Gulfstream Era</h3>
-                            <p>The smaller, 17,760 pounds (8.06 t) MTOW North American Sabreliner, tailored to the USAF
-                                UTX requirement, first flew on 16 September 1958. Powered by two Pratt & Whitney.</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-thumb" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="{{asset('assets/images/aviation/about_page/history/history-4.png')}}" alt="history">
-                        </div>
-                        <div class="history-content" data-aos="fade-right" data-aos-duration="1200">
-                            <h2 class="year">202X</h2>
-                            <h3 class="title">Beyond Earth</h3>
-                            <p>The 25,000 pounds (11 t) MTOW British Aerospace 125 first flew on 13 August 1962 as the
-                                de Havilland DH.125, powered by two 3,000 pounds-force (13 kN) Armstrong Siddeley. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End History
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Team
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="team-section ptb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="section-header-wrapper">
+          Client Testimonial
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+           <section class="client-section ptb-80 bg_img" data-background="assets/images/bg/bg-5.png">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12 text-center">
                             <div class="section-header">
-                                <span class="sub-title text--base">Our team</span>
-                                <h2 class="section-title">Meet Our Team Members</h2>
-                            </div>
-                            <div class="slider-nav-area">
-                                <div class="slider-prev">
-                                    <i class="fas fa-chevron-left"></i>
-                                </div>
-                                <div class="slider-next">
-                                    <i class="fas fa-chevron-right"></i>
-                                </div>
+                                <span class="sub-title"><span>Testimonial</span></span>
+                                <h2 class="section-title">What Our Students Say</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="team-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="team-item">
-                                        <div class="team-thumb">
-                                            <img src = "{{asset('assets/images/aviation/about_page/team/team-1.png')}}" alt="team">
-                                        </div>
-                                        <div class="team-content">
-                                            <h3 class="title"><a href="team-details.html">Kelvine Pitterson</a></h3>
-                                            <span class="sub-title">Managing Director</span>
-                                        </div>
-                                        <div class="team-social-area">
-                                            <ul class="team-social">
-                                                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-item">
-                                        <div class="team-thumb">
-                                            <img src="{{asset('assets/images/aviation/about_page/team/team-2.png')}}" alt="team">
-                                        </div>
-                                        <div class="team-content">
-                                            <h3 class="title"><a href="team-details.html">Robin Hilson</a></h3>
-                                            <span class="sub-title">Commercial Director</span>
-                                        </div>
-                                        <div class="team-social-area">
-                                            <ul class="team-social">
-                                                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-item">
-                                        <div class="team-thumb">
-                                            <img src="{{asset('assets/images/aviation/about_page/team/team-3.png')}}" alt="team">
-                                        </div>
-                                        <div class="team-content">
-                                            <h3 class="title"><a href="team-details.html">Alex Moure</a></h3>
-                                            <span class="sub-title">Director of Finance</span>
-                                        </div>
-                                        <div class="team-social-area">
-                                            <ul class="team-social">
-                                                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                                                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Team
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Client
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="client-section ptb-120 bg_img" data-background="assets/images/bg/bg-5.png">
-            <div class="container-fluid p-0">
-                <div class="row justify-content-center">
-                    <div class="col-xl-12 text-center">
-                        <div class="section-header">
-                            <span class="sub-title"><span>Testimonial</span></span>
-                            <h2 class="section-title">Our Customer Feedback</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="client-slider-two">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-quote">
-                                            <i class="icon-quote"></i>
-                                        </div>
-                                        <div class="client-content">
-                                            <p>Global aircraft charter specialist Chapman Freeborn, part of the Avia
-                                                Solutions Group, opens Moscow office to support growth and expansion
-                                                plans in response to fast developing Russian market. </p>
-                                        </div>
-                                        <div class="client-footer">
-                                            <div class="client-post-meta">
-                                                <div class="user-thumb">
-                                                    <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
-                                                </div>
-                                                <span class="name">Jhon Abraham</span>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12">
+                            <div class="client-slider-two">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="client-item">
+                                            <div class="client-quote"><i class="icon-quote"></i></div>
+                                            <div class="client-content">
+                                                <p>Vihanga Aviation Training completely transformed my confidence and skills. The instructors are very supportive and ensure you’re fully prepared for real aviation interviews.</p>
                                             </div>
-                                            <span class="ratings">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star active"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-quote">
-                                            <i class="icon-quote"></i>
-                                        </div>
-                                        <div class="client-content">
-                                            <p>Our technology consistently delivers the best pricing for charters – and
-                                                the unique ability to buy individual seats. Search the world with ease
-                                                and transparency.As the only tech-forward </p>
-                                        </div>
-                                        <div class="client-footer">
-                                            <div class="client-post-meta">
-                                                <div class="user-thumb">
-                                                    <img src="assets/images/aviation/home_page/client/4.png" alt="user">
+                                            <div class="client-footer">
+                                                <div class="client-post-meta">
+                                                    <div class="user-thumb">
+                                                        <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
+                                                    </div>
+                                                    <span class="name">Priya Sharma</span>
                                                 </div>
-                                                <span class="name">Mark John</span>
+                                                <span class="ratings">
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                </span>
                                             </div>
-                                            <span class="ratings">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star active"></i>
-                                            </span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-quote">
-                                            <i class="icon-quote"></i>
-                                        </div>
-                                        <div class="client-content">
-                                            <p>XO is not simply a private jet service. Whether you’re traveling for
-                                                business or leisure, XO Membership also delivers insider access to and
-                                                lifestyle services that enrich and broaden the journey. </p>
-                                        </div>
-                                        <div class="client-footer">
-                                            <div class="client-post-meta">
-                                                <div class="user-thumb">
-                                                    <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
+
+                                    <div class="swiper-slide">
+                                        <div class="client-item">
+                                            <div class="client-quote"><i class="icon-quote"></i></div>
+                                            <div class="client-content">
+                                                <p>The training is very practical and industry-focused. I got placed as Ground Staff right after completing my course — thank you, Vihanga Aviation!</p>
+                                            </div>
+                                            <div class="client-footer">
+                                                <div class="client-post-meta">
+                                                    <div class="user-thumb">
+                                                        <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
+                                                    </div>
+                                                    <span class="name">Rahul Verma</span>
                                                 </div>
-                                                <span class="name">James Walton</span>
+                                                <span class="ratings">
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                </span>
                                             </div>
-                                            <span class="ratings">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star active"></i>
-                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="client-item">
+                                            <div class="client-quote"><i class="icon-quote"></i></div>
+                                            <div class="client-content">
+                                                <p>From grooming to communication, every session helped me grow. Vihanga Aviation Training truly shaped my aviation career dreams into reality.</p>
+                                            </div>
+                                            <div class="client-footer">
+                                                <div class="client-post-meta">
+                                                    <div class="user-thumb">
+                                                        <img src="{{asset('assets/images/aviation/home_page/client/4.png')}}" alt="user">
+                                                    </div>
+                                                    <span class="name">Sneha Patel</span>
+                                                </div>
+                                                <span class="ratings">
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Client
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+            </section>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Faq
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="faq-section ptb-120">
+            faq section
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <section class="faq-section ptb-80">
             <div class="container">
                 <div class="row justify-content-center mb-30-none">
                     <div class="col-xl-6 col-lg-7 mb-30" data-aos="fade-right" data-aos-duration="1200">
                         <div class="faq-header-area">
                             <span class="sub-title">FAQ</span>
-                            <h2 class="title">Why you should choose our
-                                services</h2>
-                            <p>Do you have questions about flying privately? Wondering more about what’s included in our
-                                25-Hour Fleet Access Membership.</p>
-                            <ul class="faq-service-list">
-                                <li><i class="las la-star"></i> Quality Services</li>
-                                <li><i class="las la-star"></i> Affordable Cost</li>
-                                <li><i class="las la-star"></i> Professional</li>
-                            </ul>
+                            <h2 class="title">Why Choose Vihanga Aviation Training</h2>
+                            <p>Have questions about our aviation programs? Here’s what makes Vihanga Aviation Training your best choice for an aviation career.</p>
                         </div>
                         <div class="faq-wrapper">
                             <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">1. What types of aircrafts are
-                                        available?</span><span class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">1. What courses do you offer?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
-                                    <p>Whether you’re flying in a small, medium, or large group, VIP Jets offers a wide
-                                        variety of aircrafts suited for groups of all sizes. With the VIP Jets 25-Hour
-                                        Card, you have the flexibility to choose the size and age class.</p>
+                                    <p>We offer professional training in Cabin Crew, Ground Staff, and Airport Management, covering both technical knowledge and personality development.</p>
                                 </div>
                             </div>
+
                             <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">2. How many people do they hold?</span><span
-                                        class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">2. Do you provide placement assistance?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
-                                    <p>Whether you’re flying in a small, medium, or large group, VIP Jets offers a wide
-                                        variety of aircrafts suited for groups of all sizes. With the VIP Jets 25-Hour
-                                        Card, you have the flexibility to choose the size and age class.</p>
+                                    <p>Yes! We have a strong placement network with leading airlines and airports to help students start their careers confidently.</p>
                                 </div>
                             </div>
+
                             <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">3. Can I use more than one of your aircrafts
-                                        at a time?</span><span class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">3. Is prior aviation experience required?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
-                                    <p>Whether you’re flying in a small, medium, or large group, VIP Jets offers a wide
-                                        variety of aircrafts suited for groups of all sizes. With the VIP Jets 25-Hour
-                                        Card, you have the flexibility to choose the size and age class.</p>
+                                    <p>No, our courses are designed for beginners. We train you from the basics to advanced professional standards.</p>
                                 </div>
                             </div>
+
                             <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">4. Where can I fly on one of your private
-                                        jets?</span><span class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">4. What is the duration of your courses?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
-                                    <p>Whether you’re flying in a small, medium, or large group, VIP Jets offers a wide
-                                        variety of aircrafts suited for groups of all sizes. With the VIP Jets 25-Hour
-                                        Card, you have the flexibility to choose the size and age class.</p>
+                                    <p>Course durations vary from 6 months to 1 year depending on the program and specialization you choose.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-6 col-lg-5 mb-30">
                         <div class="faq-thumb" data-aos="fade-left" data-aos-duration="1200">
                             <img src="{{asset('assets/images/aviation/about_page/faq/faq.png')}}" alt="faq">
@@ -654,54 +372,6 @@
                 </div>
             </div>
         </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Faq
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Brand
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <div class="brand-section ptb-120">
-            <div class="container">
-                <div class="row justify-content-center mt-10-none mb-10-none">
-                    <div class="col-xl-12 text-center">
-                        <div class="brand-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="brand-item">
-                                        <img src="{{asset('assets/images/brand/brand-1.png')}}" alt="brand">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-item">
-                                        <img src="{{asset('assets/images/brand/brand-2.png')}}" alt="brand">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-item">
-                                        <img src="{{asset('assets/images/brand/brand-3.png')}}" alt="brand">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-item">
-                                        <img src="{{asset('assets/images/brand/brand-4.png')}}" alt="brand">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-item">
-                                        <img src="{{asset('assets/images/brand/brand-5.png')}}" alt="brand">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Brand
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
     </div>
 
