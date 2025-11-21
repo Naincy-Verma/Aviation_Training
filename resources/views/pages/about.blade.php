@@ -1,4 +1,259 @@
 @extends('layout.master')
+@section('css')
+<style>
+     :root {
+            --primary-color: #dcbb87;
+            --dark-text: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: #F3F4F8;
+            padding:80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            /*padding: 2rem 0;*/
+        }
+        
+        .hero-subtitle {
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Aircraft Section */
+        .aircraft-section {
+            position: relative;
+            padding: 3rem 0;
+        }
+        
+        .aircraft-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .aircraft-image {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* Flight Info Boxes */
+        .flight-info {
+            position: absolute;
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            min-width: 250px;
+        }
+        
+        .flight-info-icon {
+            background: #e74c3c;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .flight-info-text {
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .flight-info-top-left {
+            top: 4%;
+            left: 11%;
+        }
+        
+        .flight-info-top-right {
+            top: 4%;
+            right: 11%;
+        }
+        
+        .flight-info-bottom-left {
+            bottom: -7%;
+            left: 0%;
+        }
+        
+        .flight-info-bottom-right {
+            bottom: -7%;
+            right: 0%;
+        }
+        
+        /* Responsive */
+        /* For 1280x732 and similar resolutions */
+        @media (max-width: 1366px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+                max-width: 800px;
+            }
+            
+            .flight-info {
+                padding: 1.2rem 1.5rem;
+                min-width: 220px;
+            }
+            
+            .flight-info-text {
+                font-size: 0.85rem;
+            }
+            
+            .flight-info-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .flight-info {
+                padding: 1rem 1.2rem;
+                min-width: 200px;
+            }
+            
+            .flight-info-top-left {
+                top: 5%;
+                left: 5%;
+            }
+            
+            .flight-info-top-right {
+                top: 5%;
+                right: 5%;
+            }
+            
+            .flight-info-bottom-left {
+                bottom: -5%;
+                left: -5%;
+            }
+            
+            .flight-info-bottom-right {
+                bottom: -5%;
+                right: -5%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem;
+                padding: 0 15px;
+            }
+            
+            .learn-more-btn {
+                padding: 0.7rem 2rem;
+                font-size: 0.9rem;
+            }
+            
+            .flight-info {
+                position: static;
+                margin: 1rem auto;
+                max-width: 400px;
+            }
+            
+            .aircraft-section {
+                padding: 2rem 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem;
+            }
+            
+            .learn-more-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .flight-info {
+                padding: 1rem;
+                min-width: auto;
+            }
+            
+            .flight-info-text {
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .hero-title {
+                font-size: 1.3rem;
+            }
+            
+            .learn-more-btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+@endsection
 @section('content')
 
     <div class="page-wrapper"></div>
@@ -25,76 +280,7 @@
                     </div>
                 </div>
             </section>
-        
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-          call section 
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <div class="call-widget-wrapper">
-                <button type="button" class="call-widget-btn">
-                    <span class="num"><i class="icon-call-icon"></i> +91 98765 43210</span>
-                    <span class="arrow"></span>
-                </button>
 
-                <div class="call-widget-form-area">
-                    <form class="book-form">
-                        <div class="row justify-content-center mb-20-none">
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                                <div class="book-select">
-                                    <label>Training Location</label>
-                                    <div class="book-form-icon">
-                                        <i class="icon-from-airplane"></i>
-                                    </div>
-                                    <select class="book-select form--control">
-                                        <option selected>Hyderabad</option>
-                                        <option>Bangalore</option>
-                                        <option>Mumbai</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                                <div class="book-select">
-                                    <label>Course Type</label>
-                                    <div class="book-form-icon">
-                                        <i class="icon-to-airplane"></i>
-                                    </div>
-                                    <select class="book-select form--control">
-                                        <option selected>Cabin Crew</option>
-                                        <option>Ground Staff</option>
-                                        <option>Airport Management</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                                <div class="book-select">
-                                    <label>Preferred Start Date</label>
-                                    <div class="book-form-icon">
-                                        <i class="icon-schedule-icon"></i>
-                                    </div>
-                                    <select class="book-select form--control">
-                                        <option selected>10/11/2025</option>
-                                        <option>20/11/2025</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
-                                <label>Number of Students</label>
-                                <div class="book-quantity">
-                                    <div class="book-plus-minus">
-                                        <div class="dec qtybutton">-</div>
-                                        <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
-                                        <div class="inc qtybutton">+</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 form-group">
-                                <button type="submit" class="btn--base w-100 mt-10">
-                                    <i class="icon-btn-icon"></i> Enroll Now
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Start About
@@ -152,6 +338,70 @@
                     </div>
                 </div>
             </section>
+            
+            
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           Vission and Mission
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-subtitle">About Us</div>
+                    <h1 class="hero-title">Shaping Future Aviators – Our<br>Mission & Vision</h1>
+                    <p class="hero-description">
+                        Welcome to Vihanga Aviation Academy, a premier institute dedicated to delivering world-class pilot and aviation training. We aim to empower aspiring aviators with the skills, knowledge, and confidence required to excel in both national and international aviation sectors.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Aircraft Section -->
+            <div class="aircraft-section">
+                <div class="container-fluid">
+                    <div class="aircraft-container">
+                        
+                        <div class="flight-info flight-info-top-left">
+                            <div class="flight-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flight-info-text">
+                                Practical flight sessions<br>from partnered airbases
+                            </div>
+                        </div>
+                        
+                        <div class="flight-info flight-info-top-right">
+                            <div class="flight-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flight-info-text">
+                                Navigation training &<br>cross-country flying practice
+                            </div>
+                        </div>
+                        
+                        <div class="flight-info flight-info-bottom-left">
+                            <div class="flight-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flight-info-text">
+                                Aircraft familiarisation &<br>pre-flight procedures
+                            </div>
+                        </div>
+                        
+                        <div class="flight-info flight-info-bottom-right">
+                            <div class="flight-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flight-info-text">
+                                Certified instructor-led<br>flight demonstrations
+                            </div>
+                        </div>
+
+                        <img src="https://hyperflywp.bracketweb.com/wp-content/uploads/2025/07/about-4-image.png" 
+                        alt="Private Jet Aircraft" class="aircraft-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WHY Choose Us

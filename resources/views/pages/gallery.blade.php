@@ -2,269 +2,656 @@
 
 @section('css')
 <style>
-  /* Keep your existing CSS as is */
-  .gallery-section {
-    padding: 80px 0;
-    background: rgb(255, 255, 255);
+  :root {
+    --primary-color: #dcbb87;
+    --secondary-color: #2c3e50;
+    --dark-bg: #1a252f;
   }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Gallery Section */
+  .gallery-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  }
+
   .section-label {
-    color: rgb(220, 187, 135);
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
   }
+
+  .section-label::before,
+  .section-label::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+  }
+
   .section-title {
-    color: rgb(33, 37, 41);
-    font-size: 42px;
-    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 3rem;
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 60px;
-    max-width: 600px;
+    margin-bottom: 20px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
   }
+
+  .section-description {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+  }
+
+  /* Filter Buttons */
+  .gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 12px 30px;
+    background: white;
+    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(220, 187, 135, 0.3);
+  }
+
+  /* Masonry Grid */
+  .masonry-grid {
+    column-count: 4;
+    column-gap: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .masonry-grid {
+      column-count: 1;
+    }
+  }
+
   .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    border-radius: 15px;
     cursor: pointer;
-    border-radius: 8px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
   }
+
+  .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
   .gallery-item img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
   }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+
   .gallery-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(220, 187, 135, 0.9);
+    background: linear-gradient(135deg, rgba(220, 187, 135, 0.95), rgba(201, 168, 104, 0.95));
     opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+    padding: 20px;
   }
+
   .gallery-item:hover .gallery-overlay {
     opacity: 1;
   }
 
-  .gallery-item:hover img {
-    transform: scale(1.1);
+  .gallery-category {
+    background: white;
+    color: var(--secondary-color);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-  .plus-icon {
+
+  .gallery-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+
+  .zoom-icon {
     width: 60px;
     height: 60px;
-    background: rgb(33, 37, 41);
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
     transition: all 0.3s ease;
-    position: relative;
-  }
-  .plus-icon::before,
-  .plus-icon::after {
-    content: '';
-    position: absolute;
-    background: rgb(255, 255, 255);
-    transition: background 0.3s ease;
-  }
-  .plus-icon::before {
-    width: 24px;
-    height: 3px;
-  }
-  .plus-icon::after {
-    width: 3px;
-    height: 24px;
-  }
-  .plus-icon:hover {
-    background: rgb(255, 255, 255);
-  }
-  .plus-icon:hover::before,
-  .plus-icon:hover::after {
-    background: rgb(33, 37, 41);
+    margin-top: 10px;
   }
 
-  /* 🔍 Added for popup effect */
+  .zoom-icon:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Image Popup */
   .image-popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    animation: fadeIn 0.3s ease;
   }
-  .image-popup img {
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .popup-content {
+    position: relative;
     max-width: 90%;
-    max-height: 80%;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    max-height: 85vh;
+    animation: zoomIn 0.4s ease;
   }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .popup-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 10px;
+    /* box-shadow: 0 0 50px rgba(220, 187, 135, 0.5); */
+  }
+
   .close-popup {
     position: absolute;
-    top: 40px;
-    right: 60px;
-    font-size: 36px;
+    top: -60px;
+    right: 0;
+    font-size: 40px;
     color: #fff;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(220, 187, 135, 0.3);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 300;
   }
+
   .close-popup:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--primary-color);
+    transform: rotate(90deg);
+  }
+
+  .popup-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(220, 187, 135, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+  }
+
+  .popup-nav:hover {
+    background: var(--primary-color);
+  }
+
+  .popup-nav.prev {
+    left: -70px;
+  }
+
+  .popup-nav.next {
+    right: -70px;
+  }
+
+  /* Gallery Stats */
+  .gallery-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    color: #6c757d;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .popup-nav {
+      display: none;
+    }
+
+    .close-popup {
+      top: 20px;
+      right: 20px;
+    }
   }
 </style>
 @endsection
 
 @section('content')
- <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
-            <div class="container-fluid">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-xl-12 text-center">
-                        <div class="banner-content">
-                            <h1 class="title">Our Gallery</h1>
-                            <div class="breadcrumb-area">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+    data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Our Gallery</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        </div>
+    </div>
+</section>
 
-   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-          Gallery Section Start 
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <section class="gallery-section">
-      <div class="container-fluid">
-        <div class="section-label">OUR GALLERY</div>
-        <h2 class="section-title">Checkout our flights & travel photos</h2>
-        
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/1.jpg')}}" alt="Business travelers">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/2.png')}}" alt="Luxury jet interior">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/3.jpg')}}" alt="Traveler boarding">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/4.jpg')}}" alt="Passengers relaxing">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/5.jpg')}}" alt="Flight attendant">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="{{asset('assets/images/aviation/gallery_aviation/6.jpg')}}" alt="Aviation crew">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600" alt="Private jet boarding">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" alt="Luxury car at airport">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600" alt="View from plane">
-              <div class="gallery-overlay">
-                <div class="plus-icon"></div>
-              </div>
-            </div>
+<!-- Gallery Section Start -->
+<section class="gallery-section">
+  <div class="container-fluid">
+    <div class="section-label">OUR GALLERY</div>
+    <h2 class="section-title">Capturing Aviation Excellence</h2>
+    <p class="section-description">
+      Explore our collection of memorable moments, showcasing our state-of-the-art facilities, aircraft fleet, and the exciting journey of our students.
+    </p>
+    
+    <!-- Filter Buttons -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="aircraft">Aircraft</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+      <button class="filter-btn" data-filter="facilities">Facilities</button>
+    </div>
+    
+    <!-- Masonry Gallery Grid -->
+     <div class="masonry-grid">
+      <div class="gallery-item" data-category="training">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/2.webp')}}" alt="Aviation Training">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Training</span>
+          <h3 class="gallery-title">Flight Training Session</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
           </div>
         </div>
       </div>
-    </section>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Gallery Section End 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      
+      <!-- <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/4.webp')}}" alt="Luxury Aircraft">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Modern Aircraft Interior</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div> -->
+      
+      <!-- <div class="gallery-item" data-category="training">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/6.webp')}}" alt="Student Boarding">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Training</span>
+          <h3 class="gallery-title">Student Boarding Aircraft</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div> -->
+      
+      <div class="gallery-item" data-category="facilities">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/9.webp')}}" alt="Aviation Facility">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Facilities</span>
+          <h3 class="gallery-title">Campus Facilities</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="training">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/11.webp')}}" alt="Flight Training">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Training</span>
+          <h3 class="gallery-title">Professional Training</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/15.webp')}}" alt="Aviation Crew">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Aviation Crew</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/17.webp')}}" alt="Private Jet">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Private Jet Boarding</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="facilities">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/19.webp')}}" alt="Airport Facility">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Facilities</span>
+          <h3 class="gallery-title">Airport Infrastructure</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/25.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/27.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/33.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/36.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/43.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/47.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/52.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/54.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/60.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/64.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/66.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/69.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/71.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/74.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/78.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+       <div class="gallery-item" data-category="aircraft">
+        <img src="{{asset('assets/images/aviation/gallery_aviation/81.webp')}}" alt="Aerial View">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Aircraft</span>
+          <h3 class="gallery-title">Flight Experience</h3>
+          <div class="zoom-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Popup container 
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div id="imagePopup" class="image-popup" style="display:none;">
-  <span class="close-popup">&times;</span>
-  <img src="" alt="Popup Image">
+<!-- Image Popup -->
+<div id="imagePopup" class="image-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <div class="popup-nav prev"><i class="fas fa-chevron-left"></i></div>
+    <img src="" alt="Popup Image">
+    <div class="popup-nav next"><i class="fas fa-chevron-right"></i></div>
+  </div>
 </div>
 
 @endsection
@@ -272,26 +659,92 @@
 @section('js')
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const plusIcons = document.querySelectorAll('.plus-icon');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
     const popup = document.getElementById('imagePopup');
     const popupImage = popup.querySelector('img');
     const closeBtn = popup.querySelector('.close-popup');
+    const prevBtn = popup.querySelector('.prev');
+    const nextBtn = popup.querySelector('.next');
+    let currentImageIndex = 0;
+    let visibleImages = [];
 
-    plusIcons.forEach(icon => {
-      icon.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const img = this.closest('.gallery-item').querySelector('img');
+    // Filter functionality
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter items
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        updateVisibleImages();
+      });
+    });
+
+    // Update visible images array
+    function updateVisibleImages() {
+      visibleImages = Array.from(galleryItems).filter(item => 
+        item.style.display !== 'none'
+      );
+    }
+
+    updateVisibleImages();
+
+    // Open popup on image click
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', function () {
+        const img = this.querySelector('img');
+        currentImageIndex = visibleImages.indexOf(item);
         popupImage.src = img.src;
         popup.style.display = 'flex';
       });
     });
 
+    // Close popup
     closeBtn.addEventListener('click', function () {
       popup.style.display = 'none';
     });
 
     popup.addEventListener('click', function (e) {
-      if (e.target === popup) popup.style.display = 'none';
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+
+    // Navigation
+    prevBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+      popupImage.src = visibleImages[currentImageIndex].querySelector('img').src;
+    });
+
+    nextBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+      popupImage.src = visibleImages[currentImageIndex].querySelector('img').src;
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+      if (popup.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          popup.style.display = 'none';
+        } else if (e.key === 'ArrowLeft') {
+          prevBtn.click();
+        } else if (e.key === 'ArrowRight') {
+          nextBtn.click();
+        }
+      }
     });
   });
 </script>

@@ -62,187 +62,148 @@
         color: #fff;
     }
     /* about page */
-     .about-section {
-            padding: 80px 0;
-            background-color: #fff;
+       .about-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+        position: relative;
         }
-        
-        .section-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            color: #2c2c2c;
+        @media only screen and (max-width: 991px) {
+             .about-section {
+                padding: 30px 0;
+            }
         }
-        
+
         .lead-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 0;
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 40px;
         }
-        
-        .about-nav {
-            font-size: 0.85rem;
-            color: #c9a961;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            font-weight: 500;
+
+        /* ================================
+        Image Section
+        ================================ */
+        .images-container {
+        position: relative;
+        height: 600px;
         }
-        
-        .img-container {
-            overflow: hidden;
-            width: 100%;
+        .img-wrapper {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
-        
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         }
-        
-        .left-main-image {
-            height: 550px;
+        .img-main {
+        top: 0;
+        left: -20px;
+        width: 70%;
+        height: 65%;
+        z-index: 2;
         }
-        
-        .top-right-image {
-            height: 280px;
-            margin-bottom: 20px;
+         @media only screen and (max-width: 991px) {
+             .img-main {
+                 left: 0px;
+            }
         }
-        
-        .bottom-images {
-            height: 250px;
+
+        .img-secondary {
+        bottom: -22px;
+        right: 0;
+        width: 70%;
+        height: 70%;
+        z-index: 3;
         }
-        
-        /* .content-box {
-            padding: 30px 0 0 0;
-        } */
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0 20px 0;
+        .decorative-border {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 55%;
+        border: 3px solid #dcbb87; /* gold tone from your theme */
+        border-radius: 20px;
+        z-index: 0;
         }
-        
-        .feature-list li {
-            padding: 5px 0;
-            padding-left: 30px;
-            position: relative;
-            font-size: 0.95rem;
-            color: #666;
+
+        /* ================================
+        Features Grid
+        ================================ */
+        .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
         }
-        
-        .feature-list li:before {
-            content: "›";
-            position: absolute;
-            left: 0;
-            color: #c9a961;
-            font-size: 1.8rem;
-            font-weight: bold;
-            line-height: 1;
+
+        .about-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         }
-        
-        .btn-discover {
-            background-color: #c9a961;
-            color: #fff;
-            padding: 14px 35px;
-            border: none;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
+
+        .about-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #dcbb87; /* theme gold color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
         }
-        
-        .btn-discover:hover {
-            background-color: #b8984e;
-            color: #fff;
+
+        .about-icon i {
+        color: #fff;
+        font-size: 13px;
         }
-        
-        .description-text {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 10px;
+
+        .feature-text {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+        line-height: 1.6;
         }
-        
+
+        .about-item:hover .about-icon {
+        background: #1a1a1a; /* dark hover */
+        }
+
+        /* ================================
+        Responsive
+        ================================ */
         @media (max-width: 991px) {
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .left-main-image {
-                height: 400px;
-                margin-bottom: 20px;
-            }
-            
-            .top-right-image {
-                height: 300px;
-            }
-            
-            .bottom-images {
-                height: 220px;
-                margin-bottom: 15px;
-            }
+        .images-container {
+            height: 450px;
+            margin-bottom: 40px;
         }
-        
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        }
+
         @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
+        .lead-text {
+            font-size: 0.95rem;
+        }
+        .images-container {
+            height: 380px;
+        }
+        }
+        /* Remove PL-5 on mobile */
+        @media (max-width: 991px) {
+          .pl-5 {
+            padding-left: 15px !important;
+          }
         }
 
-        /* facility section  */
-        .facilities-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #F1F4F8 100%);
-            position: relative;
-            overflow: hidden;
-        }
 
-        .facilities-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(201, 169, 97, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .section-header {
-            margin-bottom: 60px;
-        }
-
-        .sub-title {
-            display: inline-block;
-            font-size: 0.9rem;
-            color: #c9a961;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-description {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #6c757d;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .facility-row {
-            margin-top: 40px;
-        }
+        /* about section end */
 
         /* Facility Card Styles */
         .facilities-section {
@@ -265,7 +226,7 @@
 
         /* Section Header */
         .section-header {
-            margin-bottom: 80px;
+            margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
@@ -400,10 +361,10 @@
 
         .facility-title {
             font-size: 2rem;
-            font-weight: 900;
+            font-weight: 600;
             color: #1a1a1a;
             margin-bottom: 15px;
-            letter-spacing: -1px;
+            letter-spacing: 1px;
             line-height: 1.1;
         }
 
@@ -479,62 +440,6 @@
         .price-section {
             flex: 1;
         }
-
-        .price-label {
-            display: block;
-            font-size: 0.75rem;
-            color: #6c757d;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .price-value {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #c9a961;
-            line-height: 1;
-            margin: 0;
-        }
-
-        .price-value span {
-            font-size: 1.2rem;
-            color: #6c757d;
-            font-weight: 600;
-        }
-
-        /* Book Button */
-        .btn-facility-book {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 12px 30px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 3px solid #1a1a1a;
-            transition: all 0.4s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            white-space: nowrap;
-        }
-
-        .btn-facility-book:hover {
-            background: transparent;
-            color: #1a1a1a;
-            transform: translateX(10px);
-        }
-
-        .btn-facility-book i {
-            transition: transform 0.4s ease;
-        }
-
-        .btn-facility-book:hover i {
-            transform: translateX(8px);
-        }
-
         /* Responsive Design */
         @media (max-width: 991px) {
             .section-title {
@@ -571,7 +476,7 @@
 
         @media (max-width: 768px) {
             .facilities-section {
-                padding: 60px 0;
+                padding: 30px 0;
             }
             
             .section-title {
@@ -579,7 +484,7 @@
             }
             
             .section-header {
-                margin-bottom: 50px;
+                margin-bottom: 12px;
             }
             
             .facility-title {
@@ -627,10 +532,16 @@
         /* gallery */
         .gallery-section {
             padding: 80px 0;
-            background: #f9fafa;
+            background: #1a1a1a;
         }
+        @media only screen and (max-width: 991px) {
+            .gallery-section {
+            padding: 40px 0;
+            }
+        }
+
         .section-label {
-            color: rgb(220, 187, 135);
+            color: #dcbb87;
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 2px;
@@ -638,30 +549,51 @@
             margin-bottom: 15px;
             text-align: center;
         }
-        .section-title {
-            color: rgb(33, 37, 41);
+
+        .gallery-title {
+            color: #fff;
             font-size: 42px;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 30px;
-            cursor: pointer;
-            border-radius: 8px;
+
+        /* Masonry Layout */
+        .masonry-gallery {
+            column-count: 3;
+            column-gap: 20px;
         }
-        .gallery-item img {
+        @media (max-width: 992px) {
+            .masonry-gallery {
+            column-count: 2;
+            }
+        }
+        @media (max-width: 576px) {
+            .masonry-gallery {
+            column-count: 1;
+            }
+        }
+
+        .masonry-item {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .masonry-item img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
             display: block;
+            border-radius: 8px;
             transition: transform 0.4s ease;
         }
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+
         .gallery-overlay {
             position: absolute;
             top: 0;
@@ -675,30 +607,26 @@
             align-items: center;
             justify-content: center;
         }
-        .gallery-item:hover .gallery-overlay {
+        .masonry-item:hover .gallery-overlay {
             opacity: 1;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
         .plus-icon {
             width: 60px;
             height: 60px;
-            background: rgb(33, 37, 41);
+            background: #212529;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
             position: relative;
+            transition: all 0.3s ease;
         }
         .plus-icon::before,
         .plus-icon::after {
             content: '';
             position: absolute;
-            background: rgb(255, 255, 255);
-            transition: background 0.3s ease;
+            background: #fff;
         }
         .plus-icon::before {
             width: 24px;
@@ -709,20 +637,18 @@
             height: 24px;
         }
         .plus-icon:hover {
-            background: rgb(255, 255, 255);
+            background: #fff;
         }
         .plus-icon:hover::before,
         .plus-icon:hover::after {
-            background: rgb(33, 37, 41);
+            background: #212529;
         }
 
-        /* 🔍 Added for popup effect */
+        /* Popup */
         .image-popup {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85);
             display: flex;
             justify-content: center;
@@ -733,7 +659,7 @@
             max-width: 90%;
             max-height: 80%;
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
         }
         .close-popup {
             position: absolute;
@@ -742,7 +668,7 @@
             font-size: 36px;
             color: #fff;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255,255,255,0.15);
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -752,216 +678,607 @@
             transition: background 0.3s ease;
         }
         .close-popup:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
+            background: rgba(255,255,255,0.3);
+        } 
+        /* gallery section */
         /* why section */
-       .why-section {
-    position: relative;
-    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4b8 50%, #f5e6d3 100%);
-    overflow: hidden;
+        .services-header {
+    padding: 80px 0px;
+    background: #19232d;
 }
 
-/* Floating Clouds */
-.cloud {
-    position: absolute;
-    width: 100px;
-    height: 40px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 100px;
-    opacity: 0.6;
-    animation: float-cloud 30s linear infinite;
-}
-.cloud::before, .cloud::after {
-    content: '';
-    position: absolute;
-    background: rgba(255,255,255,0.4);
-    border-radius: 50%;
-}
-.cloud::before { width: 50px; height: 50px; top: -25px; left: 10px; }
-.cloud::after { width: 60px; height: 60px; top: -30px; right: 10px; }
-
-.cloud-1 { top: 10%; left: -10%; animation-delay: 0s; }
-.cloud-2 { top: 30%; left: -15%; animation-delay: 8s; }
-.cloud-3 { top: 60%; left: -12%; animation-delay: 15s; }
-
-@keyframes float-cloud { to { transform: translateX(120vw); } }
-
-/* Header */
-.badge-main {
-    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
-    color: #fff;
-    padding: 12px 35px;
-    border-radius: 50px;
+.services-subtitle {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 3px;
+    color: #a67c52;
     text-transform: uppercase;
-    box-shadow: 0 8px 25px rgba(196, 30, 58, 0.4);
+    margin-bottom: 15px;
 }
-.main-title { font-size: 42px; font-weight: 900; color: #1a1a1a; }
-.main-subtitle { font-size: 18px; color: #666; }
 
-/* Feature Cards */
-.feature-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 35px 25px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: all 0.4s;
-    border-top: 4px solid #c41e3a;
+.services-subtitle::after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, #a67c52, transparent);
+    margin-left: 20px;
 }
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+.services-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #a67c52;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
-.feature-icon-box {
-    width: 80px; height: 80px;
-    margin: 0 auto 25px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+
+.services-description {
+    font-size: 1.05rem;
     color: #fff;
-    box-shadow: 0 10px 20px rgba(196, 30, 58, 0.3);
-    transition: transform 0.4s ease;
+    line-height: 1.8;
+    max-width: 600px;
 }
-.feature-card:hover .feature-icon-box {
-    transform: rotateY(360deg);
-}
-.feature-icon-box i { font-size: 36px; color: #fff; }
 
-/* Main Content */
-.main-content-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    overflow: hidden;
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 35px;
+    background: transparent;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    font-size: 0.9rem;
 }
-.image-column {
+
+.view-all-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #a67c52;
+    transition: width 0.3s;
+}
+
+.view-all-btn:hover::after {
+    width: 100%;
+}
+
+.view-all-btn i {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.view-all-btn:hover i {
+    transform: translateX(5px);
+}
+
+.flex-banner-section {
+    padding: 0;
     position: relative;
     overflow: hidden;
 }
-.aircraft-image {
+
+.wdt-flex-banner-options {
+    display: flex;
+    height: 650px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.wdt-flex-banner-option {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-size: cover;
+    background-position: center;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.wdt-flex-banner-option:last-child {
+    border-right: none;
+}
+
+.wdt-flex-banner-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    transition: all 0.5s;
+}
+
+.wdt-flex-banner-option:hover::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.wdt-flex-banner-option.active::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.wdt-flex-banner-option.active {
+    flex: 2.5;
+}
+
+.wdt-flex-banner-label {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
-}
-.main-content-card:hover .aircraft-image {
-    transform: scale(1.1);
-}
-.image-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 20px;
-}
-
-
-/* Text */
-.text-column { padding: 50px; }
-.content-main-title { font-size: 32px; font-weight: 800; color: #1a1a1a; }
-.content-main-title .highlight { color: #c41e3a; }
-.content-paragraph { color: #555; }
-
-/* Stats */
-.stats-row { gap: 20px; }
-.stat-box {
-    flex: 1;
-    background: #f8f9fa;
-    border-left: 4px solid #c41e3a;
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-}
-.border-warning { border-left-color: #d4af37; }
-.border-brown { border-left-color: #8b4513; }
-.text-brown { color: #8b4513; }
-
-/* Features List */
-.features-list {
-    list-style: none;
+    display: flex;
+    align-items: flex-end;
     padding: 0;
-    margin: 0;
+    z-index: 2;
 }
-.features-list li {
-    padding: 8px 0;
-    font-weight: 500;
-    color: #333;
+
+.wdt-flex-banner-info {
+    width: 100%;
+    padding: 50px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease 0.3s;
+}
+
+.wdt-flex-banner-option.active .wdt-flex-banner-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.wdt-flex-banner-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+    transition: all 0.6s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.wdt-flex-banner-option.active .wdt-flex-banner-title {
+    position: relative;
+    writing-mode: horizontal-tb;
+    transform: none;
+    left: auto;
+    top: auto;
+    font-size: 30px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+@media (max-width: 768px) {
+    .wdt-flex-banner-option.active .wdt-flex-banner-title {
+        position: relative !important;
+        writing-mode: horizontal-tb !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+        font-size: 20px !important;
+        margin-bottom: 0 !important;
+        letter-spacing: 1px !important;
+
+        /* FIX FOR PADDING */
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0px !important;   
+        box-sizing: border-box !important;
+    }
+}
+
+
+@media (max-width: 1280px) and (max-height: 720px) {
+  .wdt-flex-banner-option.active .wdt-flex-banner-title {
+      position: relative;
+      writing-mode: horizontal-tb;
+      transform: none;
+      left: auto;
+      top: auto;
+      font-size: 1.5rem; /* fixed value, no negative */
+      margin-bottom: 25px;
+      letter-spacing: 3px;
+  }
+}
+
+.wdt-flex-banner-content {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.wdt-flex-banner-content h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;  
+}
+
+.wdt-flex-banner-button {
+    display: inline-block;
+}
+
+.wdt-flex-banner-button a {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #a67c52;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(166, 124, 82, 0.3);
+}
+
+.wdt-flex-banner-button a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.wdt-flex-banner-button a:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.wdt-flex-banner-button a:hover {
+    background: #8b6543;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(166, 124, 82, 0.5);
+}
+
+/* Hide content in collapsed state */
+.wdt-flex-banner-option:not(.active) .wdt-flex-banner-content,
+.wdt-flex-banner-option:not(.active) .wdt-flex-banner-button {
+    display: none;
 }
 
 /* Responsive */
+@media (max-width: 991px) {
+    .services-title {
+        font-size: 2.2rem;
+    }
+
+    .wdt-flex-banner-options {
+        height: 500px;
+    }
+
+    .wdt-flex-banner-option.active .wdt-flex-banner-title {
+        font-size: 1.5rem;
+    }
+
+    .wdt-flex-banner-info {
+        padding: 30px;
+    }
+}
+
 @media (max-width: 768px) {
-    .text-column { padding: 30px; }
-    .main-title { font-size: 28px; }
-}
-/* Carrer  section css */
-.pilot-hero {
-  background:linear-gradient(135deg, #c9a961, #d4b76a); 
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-}
+    .services-header {
+        padding: 50px 0 30px;
+    }
 
-/* Gradient Title */
-.title-gradient {
-  background: linear-gradient(90deg, #004aad, #007bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .services-title {
+        font-size: 1.8rem;
+    }
 
-/* Feature Badges */
-.badge-feature {
-  background: #ffffff;
-  border: 2px solid #007bff;
-  color: #007bff;
-  border-radius: 50px;
-  padding: 10px 22px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.1);
-}
+    .wdt-flex-banner-options {
+        flex-direction: column;
+        height: auto;
+    }
 
-.badge-feature:hover {
-  background: #007bff;
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-  transform: translateY(-3px);
-}
+    .wdt-flex-banner-option {
+        flex: 1;
+        min-height: 300px;
+    }
 
-/* CTA Button */
-.btn-explore {
-  background: linear-gradient(90deg, #004aad, #00a6ff);
-  color: #fff;
-  border-radius: 50px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
-  transition: all 0.3s ease;
-}
+    .wdt-flex-banner-option::before {
+        background-image: linear-gradient(180deg, #05336700, #000000 100%);
+    }
 
-.btn-explore:hover {
-  background: linear-gradient(90deg, #00a6ff, #004aad);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+    .wdt-flex-banner-option.active {
+        flex: 1;
+        min-height: 400px;
+    }
+
+    .wdt-flex-banner-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    .wdt-flex-banner-option.active .wdt-flex-banner-title {
+        font-size: 1.5rem;
+    }
+
+    .wdt-flex-banner-info {
+        padding: 20px;
+    }
+
+    .wdt-flex-banner-content {
+        font-size: 0.9rem;
+    }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .pilot-hero {
-    padding: 60px 20px;
-  }
-  .display-4 {
-    font-size: 2rem;
-  }
-  .badge-feature {
-    font-size: 0.8rem;
-    padding: 8px 18px;
-  }
+/* Animation on load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+.services-header > * {
+    animation: fadeInUp 0.8s ease-out both;
+}
 
+.services-subtitle {
+    animation-delay: 0.1s;
+}
+
+.services-title {
+    animation-delay: 0.2s;
+}
+
+.services-description {
+    animation-delay: 0.3s;
+}
+
+.view-all-btn {
+    animation-delay: 0.4s;
+}
+/* ===== Minimal CSS patch — add at the end of your CSS ===== */
+
+/* Ensure hover visuals are applied even if media queries override :hover */
+.wdt-flex-banner-option:hover,
+.wdt-flex-banner-option.hover,
+.wdt-flex-banner-option.active {
+  /* copy the exact visual rules you expect on hover/active */
+  transform: scale(1.03) !important;
+  filter: brightness(1.05) !important;
+}
+
+/* If you rely on the ::before gradient change on hover, include it too */
+.wdt-flex-banner-option:hover::before,
+.wdt-flex-banner-option.hover::before,
+.wdt-flex-banner-option.active::before {
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%) !important;
+}
+
+/* Make sure nothing blocks pointer events on the options */
+.wdt-flex-banner-option {
+  pointer-events: auto !important;
+  z-index: 10;
+}
+.wdt-flex-banner::before,
+.wdt-flex-banner::after {
+  pointer-events: none !important;
+}
+    /* why us end */
+    
+    /* Carrer  section css */
+       .aviation-section {
+            padding: 80px 0;
+            background: #FFFFFF;
+            position: relative;
+        }
+        .career-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #2c2c2c;
+        }
+        .feature-box {
+            background: #c9e7eb66;
+            border-radius: 30px;
+            padding: 50px 40px 50px 120px;
+            margin-bottom: 40px;
+            position: relative;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 30px;
+            padding: 2px;
+            background: linear-gradient(135deg, #c9a961, #d4b76a);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-box:hover::before {
+            opacity: 1;
+            animation: rotateBorder 3s linear infinite;
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                background: linear-gradient(0deg, #c9a961, #d4b76a);
+            }
+            25% {
+                background: linear-gradient(90deg, #c9a961, #d4b76a);
+            }
+            50% {
+                background: linear-gradient(180deg, #c9a961, #d4b76a);
+            }
+            75% {
+                background: linear-gradient(270deg, #c9a961, #d4b76a);
+            }
+            100% {
+                background: linear-gradient(360deg, #c9a961, #d4b76a);
+            }
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.25);
+        }
+
+        .feature-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #c9a961, #d4b76a);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(201, 169, 97, 0.4);
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a1628;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .aircraft-image-container {
+            position: relative;
+            text-align: right;
+            margin-bottom: 50px;
+        }
+
+        .aircraft-image-container img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .left-col {
+            padding-right: 30px;
+        }
+
+        .right-col {
+            padding-left: 30px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ff6b35;
+            color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        @media (max-width: 991px) {
+            .left-col,
+            .right-col {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .aircraft-image-container {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 50px;
+            }
+
+            .feature-box {
+                padding: 40px 30px 40px 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .aviation-section {
+                padding: 30px 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .feature-box {
+                padding: 35px 25px;
+                text-align: center;
+            }
+
+            .feature-number {
+                position: static;
+                transform: none;
+                margin: 0 auto 20px;
+            }
+
+            .feature-title {
+                font-size: 1.25rem;
+            }
+        }
+    /* Carrer  section css end*/
 </style>
 @endsection
 @section('content')
@@ -985,10 +1302,10 @@
             </div>
             <div class="banner-social-area">
                 <ul class="banner-social">
-                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/vihangaaviationacademy"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/VihangaAviation" class="active"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://youtube.com/@vihangaaviationacademy?si=j9TQRTPobf3XdqEU"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/vihangaaviationacademy/"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="container-fluid">
@@ -1001,7 +1318,7 @@
                                 training programs designed to help you soar high in your career. From pilot training to 
                                 ground handling and cabin crew programs — we prepare you for a successful future in the skies.</p>
                                 <div class="banner-btn">
-                                    <a href="{{url('/courses')}}" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Explore Courses</a>
+                                    <a href="{{url('/')}}" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Explore </a>
                                     <a href="{{url('/contact-us')}}" class="btn--base active">Request Information <i class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                         </div>
@@ -1015,179 +1332,160 @@
             </div>
         </section>
        
-      
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             About section
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="about-section">
             <div class="container">
-                <div class="row">
-                    <!-- Left Column -->
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="about-nav">About Us</div>
-                        <h1 class="section-title text-left"> Empowering the Next Generation of Aviation Professionals</h1>
-                         <p class="lead-text">
-                            At <strong>Vihanga Aviation Training</strong>, we are committed to providing world-class aviation education and practical training that prepare students for successful careers in the aviation industry. Our mission is to nurture talent, build confidence, and help aspiring aviation enthusiasts reach new heights.
-                        </p>
-                        <div class="img-container left-main-image mt-4">
-                            <img src="{{asset('assets/images/newimages/home/about1.jpg')}}" alt="Woman working in private jet">
-                        </div>
+                <div class="row align-items-center">
+                <!-- Left Column - Images -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="images-container">
+                    <div class="img-wrapper img-main">
+                        <img src="{{asset('assets/images/aviation/home_page/about/newabout.jpg')}}" alt="Pilot Training">
                     </div>
-                    
-                    <!-- Right Column -->
-                    <div class="col-lg-6">
-                        <!-- Top Large Image -->
-                        <div class="img-container top-right-image">
-                            <img src="{{asset('assets/images/newimages/home/about2.jpg')}}" alt="Private jet exterior">
+                    <div class="img-wrapper img-secondary">
+                        <img src="{{asset('assets/images/aviation/home_page/about/newabout2.jpg')}}" alt="Aviation Professionals">
+                    </div>
+                    <div class="decorative-border"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="col-lg-6 pl-5">
+                    <div class="section-header section-header--style">
+                        <span class="sub-title">ABOUT US
+                            <span class="right-icon"><i class="icon-Benefits-of-Training"></i></span>
+                        </span>
+                        <h2 class="section-title text-left">About Vihanga Aviation Training</h2>
+                        <p class="lead-text">
+                        Vihanga Aviation Training is a premier aviation institute dedicated to nurturing the next generation of aviation professionals. 
+                        We provide world-class training programs that combine technical expertise, professional development, and real-world experience to prepare students for successful careers in the aviation industry. 
+                        Our mission is to deliver excellence through expert instructors, modern infrastructure, and internationally aligned training standards.
+                        </p>
+                    </div>
+                    <!-- Features Grid -->
+                    <div class="features-grid">
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Experienced Aviation Trainers</span>
                         </div>
-                        
-                        <!-- Two Bottom Images Side by Side -->
-                        <div class="row mb-3">
-                            <div class="col-6 pr-2">
-                                <div class="img-container bottom-images">
-                                    <img src="{{asset('assets/images/newimages/home/about3.jpg')}}" alt="Private jet interior view 1">
-                                </div>
-                            </div>
-                            <div class="col-6 pl-2">
-                                <div class="img-container bottom-images">
-                                    <img src="{{asset('assets/images/newimages/home/about4.jpg')}}" alt="Private jet interior view 2">
-                                </div>
-                            </div>
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Globally Recognized Training Programs</span>
                         </div>
-                        
-                        <!-- Content Below Images -->
-                        <div class="content-box">
-                            <p class="description-text">
-                                Vihanga Aviation offers a wide range of certified training programs — from pilot training and ground handling to cabin crew and airport operations. With a blend of experienced instructors, advanced simulation tools, and global-standard curriculum, we ensure our students receive both technical expertise and professional excellence.
-                            </p>
-                    
-                            <ul class="feature-list">
-                                <li>Comprehensive aviation programs for all career levels.</li>
-                                <li>Experienced instructors with real-world aviation background.</li>
-                                <li>Hands-on training with modern simulation and aircraft equipment.</li>
-                            </ul>
-                            
-                            <a href="{{url('/about')}}" class="btn btn-discover">Discover More</a>
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Modern Classrooms & Training Equipment</span>
                         </div>
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Strong Industry Partnerships</span>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Comprehensive Career Guidance</span>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-icon"><i class="fa fa-check"></i></div>
+                            <span class="feature-text">Commitment to Safety & Quality</span>
+                        </div>
+                        <a href="{{url('about')}}" class="btn--base">
+                            View More<i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           Why Section 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="services-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12 mb-4 mb-md-0">
+                        <div class="services-subtitle">Why VAA?</div>
+                        <h2 class="services-title">The Preferred Choice for Aviation Training</h2>
+                        <p class="services-description">
+                            Vihanga Aviation Academy (VAA) offers world-class training with an advanced learning environment, 
+                            modern aircraft, and expert instructors dedicated to helping aspiring pilots achieve their aviation goals.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-           <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           Why Section 
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="why-section py-5">
-            <!-- Floating Clouds -->
-            <div class="cloud cloud-1"></div>
-            <div class="cloud cloud-2"></div>
-            <div class="cloud cloud-3"></div>
-
-            <!-- Airplane Trail -->
-            <div class="airplane-trail"></div>
-
-            <div class="container">
-                <!-- Section Header -->
-                <div class="section-header text-center mb-5">
-                    <div class="badge-container d-inline-flex align-items-center justify-content-center mb-3">
-                        <div class="decorative-wing left"></div>
-                        <div class="badge-main">Why Vihanga?</div>
-                        <div class="decorative-wing"></div>
-                    </div>
-                    <h2 class="main-title">The Preferred Choice for Flying Training</h2>
-                    <p class="main-subtitle">Excellence in Aviation Education Since Inception</p>
-                </div>
-
-                <!-- Feature Cards Row -->
-                <div class="row features-row mb-5">
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="feature-card">
-                            <div class="feature-icon-box bg-danger">
-                                <i class="fas fa-map-marker-alt"></i>
+        <section class="flex-banner-section">
+            <div class="wdt-flex-banner-options">
+                <!-- Option 1 -->
+                <div class="wdt-flex-banner-option" style="background-image: url('{{asset('assets/images/aviation/gallery_aviation/gallery2.jpg')}}'); ">
+                    <div class="wdt-flex-banner-label">
+                        <div class="wdt-flex-banner-info">
+                            <div class="wdt-flex-banner-title">Strategically Located</div>
+                            <div class="wdt-flex-banner-content">
+                                <h2>Strategically Located</h2>
+                                <p>
+                                VAA is situated in a location that offers excellent weather conditions, ample flying hours, 
+                                and an airspace perfect for continuous training. The academy provides a professional flying environment 
+                                that supports efficient learning and growth.
+                                </p>
                             </div>
-                            <h3 class="feature-title">Strategic Location</h3>
-                            <p class="feature-description">
-                                Perfectly positioned with optimal flying conditions year-round for superior training
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="feature-card">
-                            <div class="feature-icon-box" style="background: linear-gradient(135deg, #d4af37, #c9a870);">
-                                <i class="fas fa-plane"></i>
-                            </div>
-                            <h3 class="feature-title">Youngest Fleet</h3>
-                            <p class="feature-description">27+ modern aircraft equipped with cutting-edge aviation technology</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="feature-card">
-                            <div class="feature-icon-box" style="background: linear-gradient(135deg, #8b4513, #5d2e0f);">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3 class="feature-title">Safety First</h3>
-                            <p class="feature-description">
-                                Highest safety standards with international-grade equipment and protocols
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="feature-card">
-                            <div class="feature-icon-box" style="background: linear-gradient(135deg, #8b0000, #c41e3a);">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3 class="feature-title">IndiGo Partner</h3>
-                            <p class="feature-description">
-                                Official IndiGo Cadet Pilot Program training partner institution
-                            </p>
+                          
                         </div>
                     </div>
                 </div>
 
-                <!-- Main Content -->
-                <div class="main-content-card">
-                    <div class="row no-gutters">
-                        <div class="col-md-6 image-column">
-                            <img src="{{asset('assets/images/newimages/home/about1.jpg')}}" 
-                                alt="Modern Aircraft Fleet" class="aircraft-image img-fluid">
-                        </div>
-
-                        <div class="col-md-6 text-column p-3">
-                            <span class="section-tag">Our Fleet Excellence</span>
-                            <h3 class="content-main-title">
-                                Fleet of <span class="highlight">27 Modern Aircraft</span> and Counting
-                            </h3>
-                            <p class="content-paragraph">
-                                With the latest avionics and safety features, Vihanga has India's youngest fleet.
-                                Training on Garmin G1000 Glass Cockpit ensures a smooth transition for cadets into
-                                the commercial airliner cockpit. The aircraft models and manufacturers are globally
-                                trusted for reliable Flying Training.
-                            </p>
-
-                            <div class="d-flex stats-row pt-3">
-                                <div class="stat-box border-danger">
-                                    <div class="stat-number text-danger">27+</div>
-                                    <div class="stat-label">Aircraft</div>
-                                </div>
-                                <div class="stat-box border-warning">
-                                    <div class="stat-number text-warning">100%</div>
-                                    <div class="stat-label">Modern</div>
-                                </div>
-                                <div class="stat-box border-brown">
-                                    <div class="stat-number text-brown">G1000</div>
-                                    <div class="stat-label">Cockpit</div>
-                                </div>
+                <!-- Option 2 - Active -->
+                <div class="wdt-flex-banner-option active" style="background-image: url('{{asset('assets/images/aviation/gallery_aviation/gallery3.png')}}');">
+                    <div class="wdt-flex-banner-label">
+                        <div class="wdt-flex-banner-info">
+                            <div class="wdt-flex-banner-title">Modern Training Fleet</div>
+                            <div class="wdt-flex-banner-content">
+                                <h2>Advanced & Reliable Aircraft</h2>
+                                <p>
+                                VAA operates a well-maintained fleet equipped with the latest avionics to ensure safe and effective training. 
+                                Students learn on modern cockpit systems that prepare them for next-level commercial aviation environments.
+                                </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <ul class="features-list pt-5">
-                                <li><i class="fas fa-check text-danger mr-2"></i> Latest Garmin G1000 Glass Cockpit Technology</li>
-                                <li><i class="fas fa-check text-danger mr-2"></i> Advanced Safety Features & Equipment</li>
-                               
-                            </ul>
+                <!-- Option 3 -->
+                <div class="wdt-flex-banner-option" style="background-image: url('{{asset('assets/images/aviation/gallery_aviation/gallery2.jpg')}}');">
+                    <div class="wdt-flex-banner-label">
+                        <div class="wdt-flex-banner-info">
+                            <div class="wdt-flex-banner-title">Professional Pilot Training</div>
+                            <div class="wdt-flex-banner-content">
+                                <h2>Become a Confident & Skilled Pilot</h2>
+                                <p>
+                                   VAA provides structured training programs designed for future commercial pilots. 
+                                    With expert instructors and an industry-oriented curriculum, cadets develop the skills 
+                                    required to progress confidently into airline training pathways.
+                                </p>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 4 -->
+                <div class="wdt-flex-banner-option" style="background-image: url('{{asset('assets/images/aviation/gallery_aviation/gallery3.png')}}');">
+                    <div class="wdt-flex-banner-label">
+                        <div class="wdt-flex-banner-info">
+                            <div class="wdt-flex-banner-title">Safety Equipped</div>
+                            <div class="wdt-flex-banner-content">
+                                <h2>Safety & Training Excellence</h2>
+                                <p>
+                                Safety is the highest priority at VAA. The academy follows strict regulatory standards, 
+                                comprehensive safety procedures, and continuous monitoring to ensure a secure and disciplined 
+                                training environment for all cadets.
+                                </p>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -1195,7 +1493,7 @@
         </section>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           Courses section
+          courses  section
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="course-section ptb-80">
             <div class="container">
@@ -1203,94 +1501,165 @@
                     <div class="col-xl-12">
                         <div class="section-header-wrapper">
                             <div class="section-header section-header--style">
-                                <span class="sub-title">Choose Course <span class="right-icon"><i
-                                            class="icon-Benefits-of-Training"></i></span></span>
+                                <span class="sub-title">Choose Course 
+                                    <span class="right-icon"><i class="icon-Benefits-of-Training"></i></span>
+                                </span>
                                 <h2 class="section-title text-left">Find The Right Aviation Course For You</h2>
                             </div>
                             <div class="section-header-btn-area">
-                                <a href="{{url('/courses')}}" class="btn--base">View All Course <i
-                                        class="icon-Group-2361 ml-2"></i></a>
+                                <a href="{{url('/')}}" class="btn--base">View All Course 
+                                    <i class="icon-Group-2361 ml-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row mb-10-none">
                     <div class="col-xl-12">
                         <div class="course-slider-wrapper">
                             <div class="course-slider">
                                 <div class="swiper-wrapper">
+
+                                    <!-- PPL -->
                                     <div class="swiper-slide">
                                         <div class="course-item">
                                             <div class="course-thumb">
-                                                <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="course">
-                                                <div class="course-prize">
-                                                    <span>₹ 75,000</span>
-                                                </div>
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
                                             </div>
                                             <div class="course-content">
                                                 <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Private Pilot
-                                                            License (PPL)</a></h3>
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Private Pilot Licence </a></h3>
                                                     <span class="time"><i class="las la-clock"></i> 45 Hours</span>
+                                                      
                                                 </div>
                                                 <div class="course-content-body">
-                                                     <p>Learn the fundamentals of flight and gain the skills to operate an aircraft privately. Our PPL course provides in-depth theoretical and hands-on flight training under expert guidance.</p>
+                                                    <p>Learn the fundamentals of flight and gain the skills to operate an aircraft privately. Our PPL course provides in-depth theoretical and hands-on flight training under expert guidance.</p>
                                                 </div>
                                                 <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
-                                                            class="icon-Group-2361 ml-2"></i></a>
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- CPL -->
                                     <div class="swiper-slide">
                                         <div class="course-item">
                                             <div class="course-thumb">
-                                                <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="course">
-                                                <div class="course-prize">
-                                                    <span>₹ 1,20,000</span>
-                                                </div>
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
                                             </div>
                                             <div class="course-content">
                                                 <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Commercial Pilot
-                                                            License</a></h3>
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Commercial Pilot Licence </a></h3>
                                                     <span class="time"><i class="las la-clock"></i> 200 Hours</span>
                                                 </div>
                                                 <div class="course-content-body">
                                                     <p>Train to become a professional pilot with our CPL program. This course focuses on advanced flight training, navigation, and safety standards required for a commercial aviation career.</p>
                                                 </div>
                                                 <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
-                                                            class="icon-Group-2361 ml-2"></i></a>
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- ATPL Ground Classes -->
                                     <div class="swiper-slide">
                                         <div class="course-item">
                                             <div class="course-thumb">
-                                                <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="course">
-                                                <div class="course-prize">
-                                                    <span>₹ 95,000</span>
-                                                </div>
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
                                             </div>
                                             <div class="course-content">
                                                 <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Multi-Engine IFR
-                                                            Rating</a></h3>
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">ATPL Ground Classes</a></h3>
                                                     <span class="time"><i class="las la-clock"></i> 6 Months</span>
                                                 </div>
                                                 <div class="course-content-body">
-                                                            <p>Prepare for an exciting career in the skies with our professional cabin crew course. Learn in-flight service, passenger safety, grooming, and communication skills to excel globally.</p>
-                                                        </div>
-                                                        <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now <i
-                                                            class="icon-Group-2361 ml-2"></i></a>
+                                                    <p>Advance your pilot career with our ATPL Ground Classes. Gain the theoretical knowledge required for the Airline Transport Pilot Licence through structured and detailed modules.</p>
+                                                </div>
+                                                <div class="course-content-footer">
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Integrated “Zero to Airline” Programme -->
+                                    <div class="swiper-slide">
+                                        <div class="course-item">
+                                            <div class="course-thumb">
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
+                                            </div>
+                                            <div class="course-content">
+                                                <div class="course-content-header">
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Zero-to-Airline Course</a></h3>
+                                                    <span class="time"><i class="las la-clock"></i> 18 Months</span>
+                                                </div>
+                                                <div class="course-content-body">
+                                                    <p>A complete training path from beginner to airline-ready pilot. This integrated program covers all stages—PPL, CPL, and multi-engine training—to prepare you for a successful airline career.</p>
+                                                </div>
+                                                <div class="course-content-footer">
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cabin Crew -->
+                                    <div class="swiper-slide">
+                                        <div class="course-item">
+                                            <div class="course-thumb">
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
+                                            </div>
+                                            <div class="course-content">
+                                                <div class="course-content-header">
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Cabin Crew Training</a></h3>
+                                                    <span class="time"><i class="las la-clock"></i> 6 Months</span>
+                                                </div>
+                                                <div class="course-content-body">
+                                                    <p>Prepare for an exciting aviation career with our Cabin Crew training. Learn in-flight service, passenger safety, grooming, and communication skills to excel in the airline industry.</p>
+                                                </div>
+                                                <div class="course-content-footer">
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Others -->
+                                    <div class="swiper-slide">
+                                        <div class="course-item">
+                                            <div class="course-thumb">
+                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
+                                            </div>
+                                            <div class="course-content">
+                                                <div class="course-content-header">
+                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Other Aviation Courses</a></h3>
+                                                    <span class="time"><i class="las la-clock"></i> Duration Varies</span>
+                                                </div>
+                                                <div class="course-content-body">
+                                                    <p>Explore specialized aviation programs like Ground Handling, Flight Dispatcher, and Airline Management designed to enhance your skills for a bright future in aviation.</p>
+                                                </div>
+                                                <div class="course-content-footer">
+                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
+                                                        <i class="icon-Group-2361 ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -1299,9 +1668,8 @@
                 </div>
             </div>
         </section>
-         
 
-         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            CTA section 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class="about-section bg-overlay-base ptb-80 bg_img"
@@ -1313,17 +1681,17 @@
                 <div class="row justify-content-center mb-30-none">
                     <div class="col-xl-7 col-lg-7 mb-30">
                         <div class="about-content">
-                              <span class="sub-title"><span>About</span> Vihanga Aviation</span>
-                                <h2 class="title">Take Your Aviation Career to New Heights</h2>
-                                <p>At Vihanga Aviation Training, we are dedicated to shaping future aviation leaders. 
-                                    Our expert instructors, advanced training programs, and real-world learning 
-                                    environments ensure that every student gains the skills and confidence to excel in the aviation industry.</p>
+                            <span class="sub-title"><span>Join</span> Vihanga Aviation</span>
+                            <h2 class="title">Start Your Journey Toward a Sky-High Career</h2>
+                            <p>Take the first step toward your aviation dreams with expert-guided training, 
+                                hands-on learning, and career-ready programs designed to help you soar 
+                                confidently into the aviation industry.</p>
                             <div class="about-book-area">
                                 <div class="about-book-element">
                                     <img src="{{asset('assets/images/element/element-7.png')}}" alt="element">
                                 </div>
-                                <div class="about-book-left">
-                                   <h3 class="call-title">Call for Admission Assistance</h3>
+                                <div class="about-book-left mb-2">
+                                    <h3 class="call-title">Call for Admission Assistance</h3>
                                     <span class="call"><a href="tel:+91-98765-43210">+91-98765-43210</a></span>
                                 </div>
                                 <div class="about-book-right">
@@ -1335,19 +1703,19 @@
                     </div>
                     <div class="col-xl-5 col-lg-5 mb-30">
                         <div class="about-thumb-video">
-                            <div class="video-main">
-                                <div class="promo-video">
-                                    <div class="waves-block">
-                                        <div class="waves wave-1"></div>
-                                        <div class="waves wave-2"></div>
-                                        <div class="waves wave-3"></div>
-                                    </div>
-                                </div>
-                                <a class="video-icon" data-rel="lightcase:myCollection"
-                                    href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
+                            <!--<div class="video-main">-->
+                            <!--    <div class="promo-video">-->
+                            <!--        <div class="waves-block">-->
+                            <!--            <div class="waves wave-1"></div>-->
+                            <!--            <div class="waves wave-2"></div>-->
+                            <!--            <div class="waves wave-3"></div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--    <a class="video-icon" data-rel="lightcase:myCollection"-->
+                            <!--        href="https://www.youtube.com/embed/Hw4ctvV25H0">-->
+                            <!--        <i class="fas fa-play"></i>-->
+                            <!--    </a>-->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -1375,10 +1743,7 @@
                 <div class="facility-row row align-items-center">
                     <div class="col-lg-6 facility-image-col" data-aos="fade-right">
                         <div class="facility-image-wrapper">
-                            <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="Light Jets" class="facility-img">
-                            <div class="image-overlay">
-                                <div class="overlay-badge">01</div>
-                            </div>
+                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Light Jets" class="facility-img">
                         </div>
                     </div>
                     <div class="col-lg-6 facility-content-col" data-aos="fade-left">
@@ -1410,11 +1775,8 @@
                             </div>
                             
                             <div class="facility-bottom">
-                                <div class="price-section">
-                                    <span class="price-label">Starting From</span>
-                                    <h3 class="price-value">$11,000<span>/hr</span></h3>
-                                </div>
-                                <a href="{{url('/facility')}}" class="btn-facility-book">
+                                
+                                <a href="{{url('/facility')}}" class="btn--base">
                                     Book Your Flight <i class="fas fa-arrow-right"></i>
                                 </a>
                                 
@@ -1427,11 +1789,7 @@
                 <div class="facility-row row align-items-center flex-lg-row-reverse">
                     <div class="col-lg-6 facility-image-col" data-aos="fade-left">
                         <div class="facility-image-wrapper featured-facility">
-                            <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="Midsize Jets" class="facility-img">
-                            <div class="image-overlay">
-                                <div class="overlay-badge">02</div>
-                            </div>
-                            <div class="featured-tag">Most Popular</div>
+                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Midsize Jets" class="facility-img">
                         </div>
                     </div>
                     <div class="col-lg-6 facility-content-col" data-aos="fade-right">
@@ -1463,11 +1821,8 @@
                             </div>
                             
                             <div class="facility-bottom">
-                                <div class="price-section">
-                                    <span class="price-label">Starting From</span>
-                                    <h3 class="price-value">$11,000<span>/hr</span></h3>
-                                </div>
-                                <a href="{{url('/facility')}}" class="btn-facility-book">
+                              
+                                <a href="{{url('/facility')}}" class="btn--base">
                                     Book Your Flight <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -1479,15 +1834,12 @@
                 <div class="facility-row row align-items-center">
                     <div class="col-lg-6 facility-image-col" data-aos="fade-right">
                         <div class="facility-image-wrapper">
-                            <img src="{{asset('assets/images/newimages/home/courses.jpg')}}" alt="Heavy Jets" class="facility-img">
-                            <div class="image-overlay">
-                                <div class="overlay-badge">03</div>
-                            </div>
+                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Heavy Jets" class="facility-img">
                         </div>
                     </div>
                     <div class="col-lg-6 facility-content-col" data-aos="fade-left">
                         <div class="facility-content">
-                            <span class="facility-label luxury-label">Ultimate Experience</span>
+                            <span class="facility-label premium-label">Ultimate Experience</span>
                             <h3 class="facility-title">Heavy Jets</h3>
                             <div class="title-underline"></div>
                             <p class="facility-text">Maximum space and luxury for long-haul international flights with superior amenities. Unmatched comfort and state-of-the-art facilities for the most discerning travelers.</p>
@@ -1514,11 +1866,8 @@
                             </div>
                             
                             <div class="facility-bottom">
-                                <div class="price-section">
-                                    <span class="price-label">Starting From</span>
-                                    <h3 class="price-value">$11,000<span>/hr</span></h3>
-                                </div>
-                                <a href="{{url('/facility')}}" class="btn-facility-book">
+                               
+                                <a href="{{url('/facility')}}" class="btn--base">
                                     Book Your Flight <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -1532,112 +1881,149 @@
             <div class="pattern-bg"></div>
         </section>
 
-         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Career Section Start 
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Career Section Start 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-       <section class="pilot-hero py-5">
-            <div class="container text-center">
-                <!-- Header -->
-                <h6 class="text-uppercase text-primary font-weight-bold mb-3">
-                Dream • Fly • Achieve
-                </h6>
-                <h1 class="display-4 font-weight-bold mb-3 title-gradient">
-                Becoming a Pilot
-                </h1>
-                <p class="lead text-muted mb-4">
-                Turn your passion for flying into a successful global career.
-                Train with the best and soar higher with confidence.
-                </p>
+        <section class="aviation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 left-col">
+                        <div class="section-label text-left">Career as a Pilot</div>
+                        <h2 class="career-title text-left">Becoming a Pilot: the sky is your office</h2>
+                        <p class="feature-description mb-2">
+                            In a world of traditional career paths, choose the skies where your office is the endless horizon. 
+                            Experience a lifestyle beyond conventional choices, blending the thrill of flight with professional 
+                            growth amidst a community of passionate aviators.
+                        </p>
+                    </div>
 
-                <!-- Features -->
-                <div class="d-flex flex-wrap justify-content-center mb-4">
-                <span class="badge-feature mx-2 mb-2">Global Exposure</span>
-                <span class="badge-feature mx-2 mb-2">Leadership Role</span>
-                <span class="badge-feature mx-2 mb-2">Financially Rewarding</span>
-                <span class="badge-feature mx-2 mb-2">Career as a Pilot</span>
-                <span class="badge-feature mx-2 mb-2">Growth Opportunities</span>
+                    <div class="col-lg-6 right-col">
+                        <!-- Aircraft Image -->
+                        <div class="aircraft-image-container">
+                            <img src="{{asset('assets/images/aviation/home_page/career/1.png')}}" alt="Commercial Aircraft" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
 
-                <!-- CTA -->
-                <a href="#" class="btn btn-explore px-5 py-3 mt-3">
-                Explore Pilot Programs
-                </a>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="feature-box">
+                            <div class="feature-number">01</div>
+                            <h3 class="feature-title">Unique Lifestyle</h3>
+                            <p class="feature-description">
+                                Enjoy a one-of-a-kind lifestyle that lets you explore the world while building a rewarding aviation career.
+                            </p>
+                        </div>
+                    </div>
 
-                <div class="mt-4">
-                <small class="text-secondary">
-                    Trusted by 50,000+ aspiring pilots worldwide
-                </small>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="feature-box">
+                            <div class="feature-number">02</div>
+                            <h3 class="feature-title">Financially Rewarding</h3>
+                            <p class="feature-description">
+                                A pilot’s career offers attractive pay scales and long-term financial growth in a high-demand industry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">       
+                        <div class="feature-box">
+                            <div class="feature-number">03</div>
+                            <h3 class="feature-title">Global Exposure</h3>
+                            <p class="feature-description">
+                                Experience new destinations, diverse cultures, and international aviation standards as you fly across the globe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="feature-box">
+                            <div class="feature-number">04</div>
+                            <h3 class="feature-title">Leadership Role & Growth</h3>
+                            <p class="feature-description">
+                                Build strong leadership qualities and explore limitless growth opportunities in your aviation journey.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
           Gallery Section Start 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="gallery-section ">
-           <div class="container">
-             <div class="section-label">OUR GALLERY</div>
-                <h2 class="section-title">Explore Our Aviation Training Moments</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="{{asset('assets/images/aviation/gallery_aviation/1.jpg')}}" alt="Business travelers">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="{{asset('assets/images/aviation/gallery_aviation/2.png')}}" alt="Luxury jet interior">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="{{asset('assets/images/aviation/gallery_aviation/3.jpg')}}" alt="Traveler boarding">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="{{asset('assets/images/aviation/gallery_aviation/4.jpg')}}" alt="Passengers relaxing">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="{{asset('assets/images/aviation/gallery_aviation/5.jpg')}}" alt="Flight attendant">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600" alt="View from plane">
-                        <div class="gallery-overlay">
-                            <div class="plus-icon"></div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="section-header-btn-area text-center">
-                        <a href="{{url('/gallery')}}" class="btn--base">View All Gallery <i class="icon-Group-2361 ml-2"></i></a>
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-label">OUR GALLERY</div>
+                <h2 class="gallery-title">Explore Our Aviation Training Moments</h2>
+
+                <div class="masonry-gallery">
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/2.webp')}}" alt="Business travelers" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
                     </div>
                 </div>
+                 <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/71.webp')}}" alt="Business travelers" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                 <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/27.webp')}}" alt="Business travelers" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/9.webp')}}" alt="Luxury jet interior" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/11.webp')}}" alt="Traveler boarding" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/15.webp')}}" alt="Passengers relaxing" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div> 
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/51.webp')}}" alt="Flight attendant" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/61.webp')}}" alt="View from plane" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                 <div class="masonry-item">
+                    <img src="{{asset('assets/images/aviation/gallery_aviation/55.webp')}}" alt="View from plane" />
+                    <div class="gallery-overlay">
+                    <div class="plus-icon"></div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="section-header-btn-area text-center pt-4">
+                <a href="{{url('/gallery')}}" class="btn--base">View All Gallery <i class="icon-Group-2361 ml-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Popup Modal -->
+            <div id="imagePopup" class="image-popup" style="display: none;">
+                <span class="close-popup">&times;</span>
+                <img src="" alt="Popup Image">
             </div>
         </section>
         
@@ -1661,11 +2047,11 @@
                         </div>
                         <div class="faq-wrapper">
                             <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">1. What aviation courses do you offer?</span><span class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">1. What aviation  do you offer?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
-                                    <p>Vihanga Aviation Training offers a wide range of certified aviation courses including
+                                    <p>Vihanga Aviation Training offers a wide range of certified aviation  including
                                     Ground Staff Training, Cabin Crew Training, Airport Management, and Air Ticketing
-                                    courses. Each program is designed to meet international aviation standards.</p>
+                                    . Each program is designed to meet international aviation standards.</p>
                                 </div>
                             </div>
                             <div class="faq-item">
@@ -1685,7 +2071,7 @@
                                 </div>
                             </div>
                             <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">4. Are your courses approved and recognized?</span><span class="right-icon"></span></h3>
+                                <h3 class="faq-title"><span class="title">4. Are your  approved and recognized?</span><span class="right-icon"></span></h3>
                                 <div class="faq-content">
                                     <p>All our aviation training programs are designed as per DGCA and international aviation
                                         industry standards. Our certifications are recognized by top airlines and aviation
@@ -1696,12 +2082,13 @@
                     </div>
                     <div class="col-xl-6 col-lg-5 mb-30">
                         <div class="faq-thumb aos-init aos-animate" data-aos="fade-left" data-aos-duration="1200">
-                            <img src="http://127.0.0.1:8000/assets/images/aviation/about_page/faq/faq.png" alt="faq">
+                            <img src="{{ asset('assets/images/aviation/about_page/faq/faq.png') }}" alt="faq">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
           Contact Section Start 
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -1764,12 +2151,8 @@
                 </div>
             </div>
         </section>
-        
 </div>
-<div id="imagePopup" class="image-popup" style="display:none;">
-  <span class="close-popup">&times;</span>
-  <img src="" alt="Popup Image">
-</div>
+
 @endsection
 @section('js')
 <script>
@@ -1782,19 +2165,63 @@
     plusIcons.forEach(icon => {
       icon.addEventListener('click', function (e) {
         e.stopPropagation();
-        const img = this.closest('.gallery-item').querySelector('img');
+        const img = this.closest('.masonry-item').querySelector('img');
         popupImage.src = img.src;
         popup.style.display = 'flex';
       });
     });
 
-    closeBtn.addEventListener('click', function () {
-      popup.style.display = 'none';
-    });
-
-    popup.addEventListener('click', function (e) {
-      if (e.target === popup) popup.style.display = 'none';
-    });
+    closeBtn.addEventListener('click', () => popup.style.display = 'none');
+    popup.addEventListener('click', e => { if (e.target === popup) popup.style.display = 'none'; });
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const options = document.querySelectorAll('.wdt-flex-banner-option');
+
+    function activateOption() {
+        options.forEach(opt => opt.classList.remove('active'));
+        this.classList.add('active');
+    }
+
+    function deactivateOption() {
+        this.classList.remove('active');
+    }
+
+    options.forEach(option => {
+        option.addEventListener('click', activateOption);
+        option.addEventListener('mouseenter', activateOption);
+        option.addEventListener('pointerenter', activateOption); // ✅ For touch + all screens
+        option.addEventListener('mouseleave', deactivateOption); // ✅ Now works on hover out
+        option.addEventListener('pointerleave', deactivateOption);
+    });
+
+    // Auto rotate functionality (optional)
+    let currentIndex = 0;
+    const autoRotate = false; // Set to true to enable auto-rotation
+
+    if (autoRotate) {
+        setInterval(() => {
+            options.forEach(opt => opt.classList.remove('active'));
+            currentIndex = (currentIndex + 1) % options.length;
+            options[currentIndex].classList.add('active');
+        }, 5000);
+    }
+});
+</script>
+<script>
+/* ===== Minimal JS patch — add after your existing script ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const opts = document.querySelectorAll('.wdt-flex-banner-option');
+  if (!opts.length) return;
+
+  opts.forEach(o => {
+    // use pointer events (works for mouse, stylus, touch)
+    o.addEventListener('pointerenter', () => o.classList.add('hover'));
+    o.addEventListener('pointerleave', () => o.classList.remove('hover'));
+    // keep existing click behavior intact (no changes)
+  });
+});
+</script>
+
 @endsection

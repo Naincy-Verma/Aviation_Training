@@ -34,7 +34,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Contact
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="contact-section ptb-120">
+        <section class="contact-section ptb-80">
             <div class="container">
                 <div class="row justify-content-center mb-30-none">
                     <div class="col-xl-6 col-lg-6 mb-30">
@@ -105,73 +105,80 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Contact
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="contact-section bg--gray ptb-120">
-            <div class="contact-element">
-                <img src="{{asset('assets/images/element/element-18.png')}}" alt="element">
+    <section class="contact-section bg--gray ptb-80">
+        <div class="contact-element">
+        <img src="{{asset('assets/images/element/element-18.png')}}" alt="element">
+    </div>
+        <div class="container">
+        <div class="row justify-content-center mb-30-none">
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="contact-left-content" data-aos="fade-right" data-aos-duration="1200">
+                    <span class="sub-title">Talk to Us</span>
+                    <h2 class="title">Have a Question?
+                        Feel Free to
+                        Contact Us</h2>
+                    <p>
+                        Whether you want to become a pilot or need guidance about our training programs, 
+                        Vihanga Aviation Academy is here to assist you. Get in touch with our team for any 
+                        admission or training-related enquiry.
+                    </p>
+                    <ul class="contact-social">
+                        <li><a href="https://www.facebook.com/vihangaaviationacademy"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/VihangaAviation" class="active"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://youtube.com/@vihangaaviationacademy?si=j9TQRTPobf3XdqEU"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/vihangaaviationacademy/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://t.me/vihangaaviationacademy"><i class="fab fa-telegram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/vihanga-aviation-academy-522b1135b"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="container">
-                <div class="row justify-content-center mb-30-none">
-                    <div class="col-xl-5 col-lg-5 mb-30">
-                        <div class="contact-left-content" data-aos="fade-right" data-aos-duration="1200">
-                            <span class="sub-title">Talk to us</span>
-                            <h2 class="title">Any Question?
-                                Fell Free to
-                                Contact</h2>
-                            <p>With a vast array of popular private planes to choose from, travelling by private jet
-                                charter is the most efficient</p>
-                            <ul class="contact-social">
-                                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7 mb-30">
-                        <div class="contact-form-inner" data-aos="fade-left" data-aos-duration="1200">
-                            <div class="contact-form-area">
-                                <form class="contact-form">
-                                    <div class="row justify-content-center mb-20-none">
-                                        <div class="col-xl-6 col-lg-6 form-group">
-                                            <label class="icon"><i class="icon-name_icone"></i></label>
-                                            <input type="text" class="form--control" name="name" placeholder="Name"
-                                                required>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 form-group">
-                                            <label class="icon"><i class="las la-envelope"></i></label>
-                                            <input type="email" class="form--control" name="email" placeholder="Email"
-                                                required>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 form-group">
-                                            <label class="icon"><i class="icon-call_icone"></i></label>
-                                            <input type="number" class="form--control" name="phone" placeholder="Phone"
-                                                required>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 form-group">
-                                            <div class="contact-select">
-                                                <select class="form--control">
-                                                    <option value="1">Subject</option>
-                                                    <option value="2">Subject one</option>
-                                                    <option value="3">Subject two</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 form-group">
-                                            <label class="icon"><i class="icon-massage"></i></label>
-                                            <textarea class="form--control" placeholder="Message" required></textarea>
-                                        </div>
-                                        <div class="col-lg-12 form-group">
-                                            <button type="submit" class="btn--base mt-10">Submit Now <i
-                                                    class="icon-Group-2361 ml-2"></i></button>
-                                        </div>
+
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="contact-form-inner" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="contact-form-area">
+                        <form class="contact-form">
+                            <div class="row justify-content-center mb-20-none">
+                                <div class="col-xl-6 col-lg-6 form-group">
+                                    <label class="icon"><i class="icon-name_icone"></i></label>
+                                    <input type="text" class="form--control" name="name" placeholder="Name" required>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 form-group">
+                                    <label class="icon"><i class="las la-envelope"></i></label>
+                                    <input type="email" class="form--control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 form-group">
+                                    <label class="icon"><i class="icon-call_icone"></i></label>
+                                    <input type="number" class="form--control" name="phone" placeholder="Phone" required>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 form-group">
+                                    <div class="contact-select">
+                                        <select class="form--control">
+                                            <option value="1">Select Subject</option>
+                                            <option value="2">Admission Enquiry</option>
+                                            <option value="3">Pilot Training Information</option>
+                                            <option value="4">General Query</option>
+                                        </select>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <label class="icon"><i class="icon-massage"></i></label>
+                                    <textarea class="form--control" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <button type="submit" class="btn--base mt-10">Submit Now 
+                                        <i class="icon-Group-2361 ml-2"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+            
+        </div>
+    </div>
+    </section>
+
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Contact
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

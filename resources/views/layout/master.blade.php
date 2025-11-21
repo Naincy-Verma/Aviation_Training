@@ -77,7 +77,7 @@
                     <div class="container-fluid">
                         <div class="header-menu-content">
                             <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/newimages/logo/header.png')}}"
+                                <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation\logo\header.png')}}"
                                         alt="site-logo" width= "200px" height="200px"></a>
                                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -89,19 +89,32 @@
                                         <!-- Home -->
                                         <li class="menu_has_children"><a href="{{url('/')}}">Home</a></li>
                                         <!-- About Us -->
-                                        <li><a href="{{url('/about')}}">About Us</a></li>
+                                        <li class="menu_has_children"><a href="{{url('/about')}}">About Us</a></li>
                                         <!-- Course -->
-                                        <li class="menu_has_children"><a href="{{url('/courses')}}">Courses</a> </li>
-                                        <!-- Facility -->
-                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facilities</a> </li>
-                                        <!-- Gallery-->
-                                        <li class="menu_has_children"><a href="#0">Pages</a>
+                                        <li class="menu_has_children">
+                                        <a href="#0">Courses</a>
                                             <ul class="sub-menu">
-                                                <li class="menu_has_children"><a href="{{url('/gallery')}}">Work With Us</a></li>
-                                                <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a></li>
-                                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                                                <li><a href="{{ url('/courses') }}">CPL (Commercial Pilot Licence)</a></li>
+                                                <li><a href="{{ url('/courses') }}">PPL (Private Pilot Licence)</a></li>
+                                                <li><a href="{{ url('/courses') }}">ATPL Ground Classes</a></li>
+                                                <li><a href="{{ url('/courses') }}">Integrated “Zero to Airline” Programme</a></li>
+                                                <li><a href="{{ url('/courses') }}">Cabin Crew</a></li>
+                                                <li><a href="{{ url('/courses') }}">Others</a></li>
                                             </ul>
                                         </li>
+                                        <!-- Facility -->
+                                        <li class="menu_has_children"><a href="{{url('/facility')}}">Facilities</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Fleet</a></li>
+                                                <li><a href="#">Ground Training school</a></li>
+                                                <li><a href="#">Dhana Airbase</a></li>
+                                                <li><a href="#">Neemuch Airbase</a></li>
+                                            </ul>  
+                                        </li> 
+                                        <!--<li class="menu_has_children"><a href="{{url('/work-with-us')}}">Work With Us</a></li>-->
+                                        <li  class="menu_has_children"><a href="{{url('/the-vaa-advantages')}}">The VAA Advantages</a></li>
+                                        <li class="menu_has_children"><a href="{{url('/gallery')}}">Gallery</a></li>
+                                        <li class="menu_has_children"><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                     </ul>
                                     <div class="header-right">
                                         <div class="search-bar d-none d-lg-block">
@@ -121,59 +134,9 @@
                                                 <i class="icon-btn-icon"></i>
                                             </a>
                                             <div class="header-action">
-                                                <a href="#" class="btn--base" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="icon-btn-icon"></i> Book Now
+                                                <a href="{{url('/enquire')}}" class="btn--base">
+                                                    <i class="icon-btn-icon"></i>Enquire
                                                 </a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Book Now Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title text-dark" id="exampleModalLabel">Book Your Aviation Training Session</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="contact-form-area">
-                                                        <form class="contact-form">
-                                                            <div class="row justify-content-center mb-20-none">
-                                                                <div class="col-xl-6 col-lg-6 form-group">
-                                                                    <label class="icon"><i class="icon-name_icone"></i></label>
-                                                                    <input type="text" class="form--control" name="name" placeholder="Name" required="">
-                                                                </div>
-                                                                <div class="col-xl-6 col-lg-6 form-group">
-                                                                    <label class="icon"><i class="las la-envelope"></i></label>
-                                                                    <input type="email" class="form--control" name="email" placeholder="Email" required="">
-                                                                </div>
-                                                                <div class="col-xl-6 col-lg-6 form-group">
-                                                                    <label class="icon"><i class="icon-call_icone"></i></label>
-                                                                    <input type="number" class="form--control" name="phone" placeholder="Phone" required="">
-                                                                </div>
-                                                                <div class="col-xl-6 col-lg-6 form-group">
-                                                                    <div class="contact-select">
-                                                                        <select class="form--control" style="display: none;">
-                                                                            <option value="1">Subject</option>
-                                                                            <option value="2">Subject one</option>
-                                                                            <option value="3">Subject two</option>
-                                                                        </select><div class="nice-select form--control" tabindex="0"><span class="current">Subject</span><ul class="list"><li data-value="1" class="option selected">Subject</li><li data-value="2" class="option">Subject one</li><li data-value="3" class="option">Subject two</li></ul></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12 form-group">
-                                                                    <label class="icon"><i class="icon-massage"></i></label>
-                                                                    <textarea class="form--control" placeholder="Message" required=""></textarea>
-                                                                </div>
-                                                                <div class="col-lg-12 form-group">
-                                                                    <button type="submit" class="btn--base mt-10">Submit Now <i class="icon-Group-2361 ml-2"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>  
-                                                </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -184,89 +147,22 @@
                 </div>
             </div>
         </header>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Header
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Scroll-To-Top
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <a href="#" class="scrollToTop">
             <i class="las la-dot-circle"></i>
             <span>Top</span>
         </a>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Scroll-To-Top
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-    @yield('content')
-  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            Start Call-widget
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <div class="call-widget-wrapper">
-            <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +1 814 929
-                    4263</span> <span class="arrow"></span></button>
-            <div class="call-widget-form-area">
-                <form class="book-form">
-                    <div class="row justify-content-center mb-20-none">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>From</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-from-airplane"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="dhaka" selected>Dhaka</option>
-                                    <option value="london">London</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>To</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-to-airplane"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="london" selected>London</option>
-                                    <option value="dhaka">Dhaka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
-                            <div class="book-select">
-                                <label>Date</label>
-                                <div class="book-form-icon">
-                                    <i class="icon-schedule-icon"></i>
-                                </div>
-                                <select class="book-select form--control">
-                                    <option value="25/12/2021" selected>25/12/2021</option>
-                                    <option value="30/12/2021">30/12/2021</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
-                            <label>Passenger</label>
-                            <div class="book-quantity">
-                                <div class="book-plus-minus">
-                                    <div class="dec qtybutton">-</div>
-                                    <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
-                                    <div class="inc qtybutton">+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 form-group">
-                            <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Book
-                                Now</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+    @yield('content')      
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <footer class="footer-section section--bg pt-60">
             <div class="footer-element" data-aos="fade-left" data-aos-duration="1200">
                 <img src="{{asset('assets/images/element/element-1.png')}}" alt="element">
@@ -282,7 +178,7 @@
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/newimages/logo/footer.png')}}"
+                                    <a class="site-logo site-title" href="{{url('/')}}"><img src="{{asset('assets/images/aviation\logo\footer.png')}}"
                                             alt="site-logo" height-="200px" width = "200px"></a>
                                 </div>
                                 <p>
@@ -298,7 +194,7 @@
                                     <li><a href="{{url('/about')}}">About us</a></li>
                                     <li><a href="{{url('/course')}}">Courses</a></li>
                                     <li><a href="{{url('/facility')}}">Facilities</a></li>
-                                     <li><a a href="{{url('/')}}">Work With Us</a></li>
+                                    <li><a a href="{{url('/the-vaa-advantages')}}">Advantages</a></li>
                                    
                                 </ul>
                             </div>
@@ -307,7 +203,7 @@
                             <div class="footer-widget">
                                 <h4 class="title">Useful Links</h4>
                                 <ul class="footer-list">
-                                    <li><a a href="{{url('/')}}">Advantages</a></li>
+                                    <li><a a href="{{url('/work-with-us')}}">Work With Us</a></li>
                                     <li><a a href="{{url('/gallery')}}">Gallery</a></li>
                                     <li><a a href="{{url('/faq')}}">FAQs</a></li>
                                     <li><a a href="{{url('/contact-us')}}">Contact Us</a></li>
@@ -334,19 +230,19 @@
                 <div class="copyright-area">
                     <div class="social-area">
                         <ul class="footer-social">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="active"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/vihangaaviationacademy"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://x.com/VihangaAviation" class="active"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://youtube.com/@vihangaaviationacademy?si=j9TQRTPobf3XdqEU"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://www.instagram.com/vihangaaviationacademy/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://t.me/vihangaaviationacademy"><i class="fab fa-telegram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/vihanga-aviation-academy-522b1135b"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <p>© {{ date('Y') }} Vihanga Aviation Academy. All rights reserved.</p>
                 </div>
             </div>
         </footer>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        
     </div>
 
 

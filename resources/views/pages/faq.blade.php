@@ -2,8 +2,9 @@
 @section('css')
 
 @endsection
+@section('content')
   <section class="banner-section inner-banner-section bg-overlay-black bg_img"
-            data-background="assets/images/bg/inner-bg.png">
+            data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
@@ -12,7 +13,7 @@
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">FAQ</li>
                                     </ol>
                                 </nav>
@@ -120,6 +121,6 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Faq
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-@section('content')
+
 
 @endsection

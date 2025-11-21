@@ -30,6 +30,8 @@ Route::view('/gallery', 'pages.gallery');
 Route::view('/contact-us', 'pages.contact-us');
 Route::view('/work-with-us', 'pages.work-with-us');
 Route::view('/faq', 'pages.faq');
+Route::view('/enquire', 'pages.enquire');
+Route::view('/the-vaa-advantages', 'pages.the-vaa-advantages');
 
 
 /*

@@ -328,21 +328,22 @@
 
 @section('content')
 <!-- Banner Section -->
- <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section class="banner-section inner-banner-section bg-overlay-black bg_img"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <section class="banner-section inner-banner-section bg-overlay-black bg_img"
             data-background="{{asset('assets/images/aviation/home_page/bgimg/inner-bg.png')}}">
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-xl-12 text-center">
                         <div class="banner-content">
-                            <h1 class="title">Our Courses</h1>
+                            <h1 class="title">Our Facility</h1>
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                        <li class="breadcrumb-item"><a href="{{url('/')}}l">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Facility</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -350,112 +351,112 @@
                     </div>
                 </div>
             </div>
-        </section>
+      </section> 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<!-- Facility Section -->
-<section class="facility-section">
-  <div class="container">
-    <div class="section-label">OUR FACILITIES</div>
-    <h2 class="section-title">Premium Aviation Training</h2>
-    <p class="section-description">
-      Experience world-class aviation training with our state-of-the-art facilities designed to shape the future of aviation professionals
-    </p>
-    
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-graduation-cap"></i>
+  <!-- Facility Section -->
+  <section class="facility-section">
+    <div class="container">
+      <div class="section-label">OUR FACILITIES</div>
+      <h2 class="section-title">Premium Aviation Training</h2>
+      <p class="section-description">
+        Experience world-class aviation training with our state-of-the-art facilities designed to shape the future of aviation professionals
+      </p>
+      
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="facility-title">Expert Training</h3>
+            <p class="facility-text">Learn from experienced aviation professionals with decades of industry expertise and hands-on knowledge</p>
           </div>
-          <h3 class="facility-title">Expert Training</h3>
-          <p class="facility-text">Learn from experienced aviation professionals with decades of industry expertise and hands-on knowledge</p>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="facility-title">Modern Simulators</h3>
+            <p class="facility-text">Train on cutting-edge flight simulators that replicate real-world scenarios with precision and accuracy</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="facility-title">Comprehensive Library</h3>
+            <p class="facility-text">Access extensive aviation resources, technical manuals, and digital learning materials for enhanced study</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="facility-title">Safety Standards</h3>
+            <p class="facility-text">Training programs aligned with international aviation safety protocols and regulatory requirements</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="facility-title">Small Class Sizes</h3>
+            <p class="facility-text">Personalized attention with limited batch sizes ensuring quality education and individual mentorship</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="facility-card">
+            <div class="facility-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="facility-title">Certified Programs</h3>
+            <p class="facility-text">Industry-recognized certifications that open doors to prestigious career opportunities worldwide</p>
+          </div>
         </div>
       </div>
       
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-laptop-code"></i>
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div class="feature-box">
+            <h3 class="feature-title">Training Infrastructure</h3>
+            <ul class="feature-list">
+              <li>Advanced flight simulation laboratories</li>
+              <li>Climate-controlled training classrooms</li>
+              <li>Practical workshop facilities</li>
+              <li>High-tech audio-visual equipment</li>
+              <li>Aviation maintenance training hangar</li>
+              <li>Computer labs with latest software</li>
+            </ul>
           </div>
-          <h3 class="facility-title">Modern Simulators</h3>
-          <p class="facility-text">Train on cutting-edge flight simulators that replicate real-world scenarios with precision and accuracy</p>
         </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-book-open"></i>
+        
+        <div class="col-lg-6">
+          <div class="feature-box">
+            <h3 class="feature-title">Student Services</h3>
+            <ul class="feature-list">
+              <li>Career counseling and placement support</li>
+              <li>Hostel accommodation facilities</li>
+              <li>Transportation services available</li>
+              <li>24/7 library and study rooms access</li>
+              <li>Medical and health services</li>
+              <li>Sports and recreational facilities</li>
+            </ul>
           </div>
-          <h3 class="facility-title">Comprehensive Library</h3>
-          <p class="facility-text">Access extensive aviation resources, technical manuals, and digital learning materials for enhanced study</p>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3 class="facility-title">Safety Standards</h3>
-          <p class="facility-text">Training programs aligned with international aviation safety protocols and regulatory requirements</p>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="facility-title">Small Class Sizes</h3>
-          <p class="facility-text">Personalized attention with limited batch sizes ensuring quality education and individual mentorship</p>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="facility-card">
-          <div class="facility-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3 class="facility-title">Certified Programs</h3>
-          <p class="facility-text">Industry-recognized certifications that open doors to prestigious career opportunities worldwide</p>
         </div>
       </div>
     </div>
-    
-    <div class="row mt-5">
-      <div class="col-lg-6">
-        <div class="feature-box">
-          <h3 class="feature-title">Training Infrastructure</h3>
-          <ul class="feature-list">
-            <li>Advanced flight simulation laboratories</li>
-            <li>Climate-controlled training classrooms</li>
-            <li>Practical workshop facilities</li>
-            <li>High-tech audio-visual equipment</li>
-            <li>Aviation maintenance training hangar</li>
-            <li>Computer labs with latest software</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="col-lg-6">
-        <div class="feature-box">
-          <h3 class="feature-title">Student Services</h3>
-          <ul class="feature-list">
-            <li>Career counseling and placement support</li>
-            <li>Hostel accommodation facilities</li>
-            <li>Transportation services available</li>
-            <li>24/7 library and study rooms access</li>
-            <li>Medical and health services</li>
-            <li>Sports and recreational facilities</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 @endsection
