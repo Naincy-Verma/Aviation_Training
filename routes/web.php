@@ -15,12 +15,12 @@ use App\Http\Controllers\CourseEligibilityController;
 use App\Http\Controllers\SelectionProcessController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CareerController;
-
+use App\Http\Controllers\HomeController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::view('/', 'pages.index');
+Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'pages.about');
 Route::view('/courses', 'pages.course');
 Route::view('/courses-details', 'pages.course-details');

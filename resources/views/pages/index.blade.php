@@ -1341,59 +1341,41 @@
                 <!-- Left Column - Images -->
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="images-container">
-                    <div class="img-wrapper img-main">
-                        <img src="{{asset('assets/images/aviation/home_page/about/newabout.jpg')}}" alt="Pilot Training">
-                    </div>
-                    <div class="img-wrapper img-secondary">
-                        <img src="{{asset('assets/images/aviation/home_page/about/newabout2.jpg')}}" alt="Aviation Professionals">
-                    </div>
-                    <div class="decorative-border"></div>
+                        <div class="img-wrapper img-main">
+                            <img src="{{ asset($about->image) }}" class="img-fluid" alt="About Image"/>
+                        </div>
+                        <div class="img-wrapper img-secondary">
+                            <img src="{{ asset($about->image_one) }}" alt="Aviation Professionals"/>
+                        </div>
+                        <div class="decorative-border"></div>
                     </div>
                 </div>
 
                 <!-- Right Column - Content -->
                 <div class="col-lg-6 pl-5">
                     <div class="section-header section-header--style">
-                        <span class="sub-title">ABOUT US
+                        <span class="sub-title"> {{ $about->title }}
                             <span class="right-icon"><i class="icon-Benefits-of-Training"></i></span>
                         </span>
-                        <h2 class="section-title text-left">About Vihanga Aviation Training</h2>
+                        <h2 class="section-title text-left"> {{ $about->sub_title }}</h2>
                         <p class="lead-text">
-                        Vihanga Aviation Training is a premier aviation institute dedicated to nurturing the next generation of aviation professionals. 
-                        We provide world-class training programs that combine technical expertise, professional development, and real-world experience to prepare students for successful careers in the aviation industry. 
-                        Our mission is to deliver excellence through expert instructors, modern infrastructure, and internationally aligned training standards.
+                       {{ $about->description_1}}
                         </p>
                     </div>
                     <!-- Features Grid -->
                     <div class="features-grid">
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Experienced Aviation Trainers</span>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Globally Recognized Training Programs</span>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Modern Classrooms & Training Equipment</span>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Strong Industry Partnerships</span>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Comprehensive Career Guidance</span>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fa fa-check"></i></div>
-                            <span class="feature-text">Commitment to Safety & Quality</span>
-                        </div>
-                        <a href="{{url('about')}}" class="btn--base">
+                        @foreach(is_array($about->features) ? $about->features : json_decode($about->features, true) as $feature)
+                            <div class="about-item">
+                                <div class="about-icon"><i class="fa fa-check"></i></div>
+                                <span class="feature-text">{{ trim($feature) }}</span>
+                            </div>
+                        @endforeach
+
+                        <a href="{{ url('about') }}" class="btn--base">
                             View More<i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
+
                 </div>
 
                 </div>
@@ -1495,8 +1477,10 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
           courses  section
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+       
         <section class="course-section ptb-80">
             <div class="container">
+
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="section-header-wrapper">
@@ -1517,157 +1501,59 @@
 
                 <div class="row mb-10-none">
                     <div class="col-xl-12">
+
                         <div class="course-slider-wrapper">
                             <div class="course-slider">
                                 <div class="swiper-wrapper">
 
-                                    <!-- PPL -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Private Pilot Licence </a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> 45 Hours</span>
-                                                      
-                                                </div>
-                                                <div class="course-content-body">
-                                                    <p>Learn the fundamentals of flight and gain the skills to operate an aircraft privately. Our PPL course provides in-depth theoretical and hands-on flight training under expert guidance.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @foreach($course as $item)
+                                        <div class="swiper-slide">
+                                            <div class="course-item">
 
-                                    <!-- CPL -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Commercial Pilot Licence </a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> 200 Hours</span>
+                                                <div class="course-thumb">
+                                                    <img src="{{ asset($item->image) }}" alt="course">
                                                 </div>
-                                                <div class="course-content-body">
-                                                    <p>Train to become a professional pilot with our CPL program. This course focuses on advanced flight training, navigation, and safety standards required for a commercial aviation career.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <!-- ATPL Ground Classes -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">ATPL Ground Classes</a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> 6 Months</span>
-                                                </div>
-                                                <div class="course-content-body">
-                                                    <p>Advance your pilot career with our ATPL Ground Classes. Gain the theoretical knowledge required for the Airline Transport Pilot Licence through structured and detailed modules.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                <div class="course-content">
 
-                                    <!-- Integrated “Zero to Airline” Programme -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Zero-to-Airline Course</a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> 18 Months</span>
-                                                </div>
-                                                <div class="course-content-body">
-                                                    <p>A complete training path from beginner to airline-ready pilot. This integrated program covers all stages—PPL, CPL, and multi-engine training—to prepare you for a successful airline career.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    <div class="course-content-header">
+                                                        <h3 class="title">
+                                                            <a href="{{url('/courses-details')}}">
+                                                                {{ $item->heading }}
+                                                            </a>
+                                                        </h3>
+                                                        <span class="time"><i class="las la-clock"></i> 45 Hours</span>
+                                                    </div>
 
-                                    <!-- Cabin Crew -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Cabin Crew Training</a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> 6 Months</span>
-                                                </div>
-                                                <div class="course-content-body">
-                                                    <p>Prepare for an exciting aviation career with our Cabin Crew training. Learn in-flight service, passenger safety, grooming, and communication skills to excel in the airline industry.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    <div class="course-content-body">
+                                                        <p>{{ $item->description }}</p>
+                                                    </div>
 
-                                    <!-- Others -->
-                                    <div class="swiper-slide">
-                                        <div class="course-item">
-                                            <div class="course-thumb">
-                                                <img src="{{asset('assets/images/aviation/home_page/facility/fac1.jpg')}}" alt="course">
-                                            </div>
-                                            <div class="course-content">
-                                                <div class="course-content-header">
-                                                    <h3 class="title"><a href="{{url('/courses-details')}}">Other Aviation Courses</a></h3>
-                                                    <span class="time"><i class="las la-clock"></i> Duration Varies</span>
+                                                    <div class="course-content-footer">
+                                                        <a href="{{url('/courses-details')}}" class="btn--base">
+                                                            Enroll Now 
+                                                            <i class="icon-Group-2361 ml-2"></i>
+                                                        </a>
+                                                    </div>
+
                                                 </div>
-                                                <div class="course-content-body">
-                                                    <p>Explore specialized aviation programs like Ground Handling, Flight Dispatcher, and Airline Management designed to enhance your skills for a bright future in aviation.</p>
-                                                </div>
-                                                <div class="course-content-footer">
-                                                    <a href="{{url('/courses-details')}}" class="btn--base">Enroll Now 
-                                                        <i class="icon-Group-2361 ml-2"></i>
-                                                    </a>
-                                                </div>
+
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
 
                                 </div>
+
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
+
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            CTA section 
@@ -1740,141 +1626,114 @@
                 </div>
                 
                 <!-- Light Jets - Left Aligned -->
-                <div class="facility-row row align-items-center">
-                    <div class="col-lg-6 facility-image-col" data-aos="fade-right">
-                        <div class="facility-image-wrapper">
-                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Light Jets" class="facility-img">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 facility-content-col" data-aos="fade-left">
-                        <div class="facility-content">
-                            <span class="facility-label">Popular Choice</span>
-                            <h3 class="facility-title">Light Jets</h3>
-                            <div class="title-underline"></div>
-                            <p class="facility-text">Perfect for short to medium range flights with exceptional speed and efficiency. Experience nimble performance combined with luxurious comfort for your regional travel needs.</p>
-                            
-                            <div class="facility-specs-row">
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div class="spec-info">
-                                        <h4>13 Passengers</h4>
-                                        <p>Comfortable Seating</p>
-                                    </div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="spec-info">
-                                        <h4>7-8 Hours</h4>
-                                        <p>Flight Range</p>
-                                    </div>
+                @foreach($facility as $key => $facility)
+                    <div class="facility-row row align-items-center">
+                        @if($key % 2 == 0)
+                            {{-- EVEN INDEX → IMAGE LEFT + TEXT RIGHT --}}
+                            <div class="col-lg-6 facility-image-col" data-aos="fade-right">
+                                <div class="facility-image-wrapper">
+                                    <img src="{{ asset('admin-assets/facility-page/' . $facility->image) }}" 
+                                        alt="Light Jets" class="facility-img">
                                 </div>
                             </div>
-                            
-                            <div class="facility-bottom">
-                                
-                                <a href="{{url('/facility')}}" class="btn--base">
-                                    Book Your Flight <i class="fas fa-arrow-right"></i>
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Midsize Jets - Right Aligned -->
-                <div class="facility-row row align-items-center flex-lg-row-reverse">
-                    <div class="col-lg-6 facility-image-col" data-aos="fade-left">
-                        <div class="facility-image-wrapper featured-facility">
-                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Midsize Jets" class="facility-img">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 facility-content-col" data-aos="fade-right">
-                        <div class="facility-content">
-                            <span class="facility-label premium-label">Premium Selection</span>
-                            <h3 class="facility-title">Midsize Jets</h3>
-                            <div class="title-underline"></div>
-                            <p class="facility-text">Ideal balance of comfort, range, and performance for transcontinental travel. Spacious cabins with premium amenities ensure a first-class experience throughout your journey.</p>
-                            
-                            <div class="facility-specs-row">
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-users"></i>
+
+                            <div class="col-lg-6 facility-content-col" data-aos="fade-left">
+                                <div class="facility-content">
+
+                                    <span class="facility-label">Popular Choice</span>
+
+                                    <h3 class="facility-title">{{ $facility->heading }}</h3>
+
+                                    <div class="title-underline"></div>
+
+                                    <p class="facility-text">{{ $facility->short_description }}</p>
+
+                                    <div class="facility-specs-row">
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="spec-info">
+                                                <h4>13 Passengers</h4>
+                                                <p>Comfortable Seating</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="spec-info">
+                                                <h4>7-8 Hours</h4>
+                                                <p>Flight Range</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="spec-info">
-                                        <h4>13 Passengers</h4>
-                                        <p>Comfortable Seating</p>
+
+                                    <div class="facility-bottom">
+                                        <a href="{{ url('/facility') }}" class="btn--base">
+                                            Book Your Flight <i class="fas fa-arrow-right"></i>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="spec-info">
-                                        <h4>7-8 Hours</h4>
-                                        <p>Flight Range</p>
-                                    </div>
+
                                 </div>
                             </div>
-                            
-                            <div class="facility-bottom">
-                              
-                                <a href="{{url('/facility')}}" class="btn--base">
-                                    Book Your Flight <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Heavy Jets - Left Aligned -->
-                <div class="facility-row row align-items-center">
-                    <div class="col-lg-6 facility-image-col" data-aos="fade-right">
-                        <div class="facility-image-wrapper">
-                            <img src="{{asset('assets/images/aviation/home_page/about/about1.jpg')}}" alt="Heavy Jets" class="facility-img">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 facility-content-col" data-aos="fade-left">
-                        <div class="facility-content">
-                            <span class="facility-label premium-label">Ultimate Experience</span>
-                            <h3 class="facility-title">Heavy Jets</h3>
-                            <div class="title-underline"></div>
-                            <p class="facility-text">Maximum space and luxury for long-haul international flights with superior amenities. Unmatched comfort and state-of-the-art facilities for the most discerning travelers.</p>
-                            
-                            <div class="facility-specs-row">
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-users"></i>
+
+                        @else
+                            {{-- ODD INDEX → TEXT LEFT + IMAGE RIGHT --}}
+                            <div class="col-lg-6 facility-content-col" data-aos="fade-right">
+                                <div class="facility-content">
+
+                                    <span class="facility-label">Popular Choice</span>
+
+                                    <h3 class="facility-title">{{ $facility->heading }}</h3>
+
+                                    <div class="title-underline"></div>
+
+                                    <p class="facility-text">{{ $facility->short_description }}</p>
+
+                                    <div class="facility-specs-row">
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="spec-info">
+                                                <h4>13 Passengers</h4>
+                                                <p>Comfortable Seating</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="spec-info">
+                                                <h4>7-8 Hours</h4>
+                                                <p>Flight Range</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="spec-info">
-                                        <h4>13 Passengers</h4>
-                                        <p>Comfortable Seating</p>
+
+                                    <div class="facility-bottom">
+                                        <a href="{{ url('/facility') }}" class="btn--base">
+                                            Book Your Flight <i class="fas fa-arrow-right"></i>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="spec-info">
-                                        <h4>7-8 Hours</h4>
-                                        <p>Flight Range</p>
-                                    </div>
+
                                 </div>
                             </div>
-                            
-                            <div class="facility-bottom">
-                               
-                                <a href="{{url('/facility')}}" class="btn--base">
-                                    Book Your Flight <i class="fas fa-arrow-right"></i>
-                                </a>
+
+                            <div class="col-lg-6 facility-image-col" data-aos="fade-left">
+                                <div class="facility-image-wrapper">
+                                    <img src="{{ asset('admin-assets/facility-page/' . $facility->image) }}" 
+                                        alt="Light Jets" class="facility-img">
+                                </div>
                             </div>
-                        </div>
+
+                        @endif
+
                     </div>
-                </div>
-                
+
+                @endforeach
+
             </div>
             
             <!-- Background Pattern -->
