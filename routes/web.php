@@ -91,5 +91,8 @@ Route::middleware(['auth:employee', 'role:Admin'])->group(function () {
     // Careers Routes
     Route::resource('careers', CareerController::class);
 
+    // Gallery Routes
+    Route::resource('gallery', App\Http\Controllers\GalleryController::class);
+    Route::delete('gallery/{gallery}/image', [App\Http\Controllers\GalleryController::class, 'deleteImage'])->name('gallery.deleteImage');
 
 });

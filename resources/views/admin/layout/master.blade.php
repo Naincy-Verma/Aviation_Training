@@ -403,6 +403,38 @@
             </a>
           </div>
         </div>
+
+        <!-- Gallery Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-images group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Gallery
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            x-show="open && !collapsed"
+            x-cloak
+            class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('gallery.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Gallery
+            </a>
+            <a href="{{route('gallery.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Gallery
+            </a>
+          </div>
+        </div>
       </nav>
     </aside>
 
