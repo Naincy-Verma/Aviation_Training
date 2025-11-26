@@ -94,12 +94,10 @@
                                         <li class="menu_has_children">
                                         <a href="#0">Courses</a>
                                             <ul class="sub-menu">
-                                                <li><a href="{{ url('/courses') }}">CPL (Commercial Pilot Licence)</a></li>
-                                                <li><a href="{{ url('/courses') }}">PPL (Private Pilot Licence)</a></li>
-                                                <li><a href="{{ url('/courses') }}">ATPL Ground Classes</a></li>
-                                                <li><a href="{{ url('/courses') }}">Integrated “Zero to Airline” Programme</a></li>
-                                                <li><a href="{{ url('/courses') }}">Cabin Crew</a></li>
-                                                <li><a href="{{ url('/courses') }}">Others</a></li>
+                                                @foreach ($course as $course)
+                                                    <li><a href="{{ url('/courses') }}">{{ $course->heading }}</a></li>
+                                                
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <!-- Facility -->

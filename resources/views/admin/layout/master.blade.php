@@ -46,6 +46,323 @@
           <i class="fa-solid fa-gauge group-hover:text-indigo-400"></i>
           <span x-show="!collapsed">Dashboard</span>
         </a>
+        <!-- Employees Dropdown -->
+        <div x-data="{ open: false }">
+          <button 
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-users group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed">Employees</span>
+            </div>
+            <svg 
+              :class="{'rotate-180': open}" 
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('employees.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> All Employees
+            </a>
+            <a href="{{route('employees.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Employee
+            </a>
+          </div>
+        </div>
+        <!-- Roles Dropdown -->
+        <div x-data="{ open: false }">
+          <button 
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-user-shield group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed">Roles</span>
+            </div>
+            <svg 
+              :class="{'rotate-180': open}" 
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('roles.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Roles
+            </a>
+            <a href="{{route('roles.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Roles
+            </a>
+          </div>
+        </div>
+        <!-- Permissions Dropdown -->
+        <div x-data="{ open: false }">
+          <button 
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group"
+          >
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-key group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed">Permissions</span>
+            </div>
+            <svg 
+              :class="{'rotate-180': open}" 
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('permissions.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Permissions
+            </a>
+            <a href="{{route('permissions.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Permissions
+            </a>
+          </div>
+        </div>
+        <!-- Role Permissions -->
+        <a href="{{route('role-permissions.index')}}" class="flex items-center py-2.5 px-6 rounded text-md space-x-3 group">
+          <i class="fa-solid fa-lock group-hover:text-indigo-400"></i>
+          <span x-show="!collapsed">Role-Permissions</span>
+        </a>
+        <!-- About Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button 
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-key group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> About Us</span>
+            </div>
+            <svg 
+              :class="{'rotate-180': open}" 
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('about.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View About us
+            </a>
+            <a href="{{route('about.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add About us
+            </a>
+          </div>
+        </div>
+        <!-- Highlight Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button 
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-key group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Highlights
+              </span>
+            </div>
+            <svg 
+              :class="{'rotate-180': open}" 
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('highlights.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View highlight
+            </a>
+            <a href="{{route('highlights.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add highlight
+            </a>
+          </div>
+        </div>
+        <!-- Courses Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-graduation-cap group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Courses
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            x-show="open && !collapsed"
+            x-cloak
+            class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('courses.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Course
+            </a>
+            <a href="{{route('courses.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Course
+            </a>
+          </div>
+        </div>
+        <!-- Course Phases Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-layer-group group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Course Phases
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            x-show="open && !collapsed"
+            x-cloak
+            class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('course_phases.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Course Phases
+            </a>
+            <a href="{{route('course_phases.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Course Phase
+            </a>
+          </div>
+        </div>
+        <!-- Course Eligibilities Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-check-circle group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Course Eligibilities
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('course_eligibilities.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Course Eligibilities
+            </a>
+            <a href="{{route('course_eligibilities.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Course Eligibility
+            </a>
+          </div>
+        </div>
+        <!-- Selection Processes Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-clipboard-list group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Selection Processes
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('selection_processes.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Selection Processes
+            </a>
+            <a href="{{route('selection_processes.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Selection Process
+            </a>
+          </div>
+        </div>
+        <!-- Facilities Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-building group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Facilities
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('facilities.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Facilities
+            </a>
+            <a href="{{route('facilities.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Facility
+            </a>
+          </div>
+        </div>
+        <!-- Careers Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-briefcase group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Careers
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open && !collapsed" x-cloak class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1">
+            <a href="{{route('careers.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Careers
+            </a>
+            <a href="{{route('careers.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Career
+            </a>
+          </div>
+        </div>
 
         <!-- Employees Dropdown -->
         <div x-data="{ open: false }">
@@ -432,6 +749,70 @@
             </a>
             <a href="{{route('gallery.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
               <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Gallery
+            </a>
+          </div>
+        </div>
+
+        <!-- FAQ Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-question group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> FAQs
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            x-show="open && !collapsed"
+            x-cloak
+            class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('faq.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View FAQs
+            </a>
+            <a href="{{route('faq.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add FAQ
+            </a>
+          </div>
+        </div>
+
+        <!-- Home Career Section Dropdown -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open=!open"
+            class="w-full flex items-center justify-between py-2.5 px-6 rounded group">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-house-laptop group-hover:text-indigo-400"></i>
+              <span x-show="!collapsed"> Home Career
+              </span>
+            </div>
+            <svg
+              :class="{'rotate-180': open}"
+              x-show="!collapsed"
+              class="w-4 h-4 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            x-show="open && !collapsed"
+            x-cloak
+            class="ml-8 mt-1 border-l border-gray-600 pl-4 space-y-1" >
+            <a href="{{route('homecareer.index')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> View Home Career
+            </a>
+            <a href="{{route('homecareer.create')}}" class="block py-2 text-sm text-gray-300 hover:text-indigo-400 flex items-center">
+              <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span> Add Home Career
             </a>
           </div>
         </div>

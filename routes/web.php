@@ -15,12 +15,16 @@ use App\Http\Controllers\CourseEligibilityController;
 use App\Http\Controllers\SelectionProcessController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\FaqController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::view('/', 'pages.index');
+Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'pages.about');
 Route::view('/courses', 'pages.course');
 Route::view('/courses-details', 'pages.course-details');
@@ -49,6 +53,10 @@ Route::post('admin/logout', [LoginController::class, 'logout'])->name('admin.log
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth:employee', 'role:Admin'])->group(function () {
+    // Existing admin resource routes...
+
+    // HomeCareer Routes
+    Route::resource('homecareer', \App\Http\Controllers\HomeCareerController::class);
 
     // Admin Dashboard
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
@@ -67,13 +75,13 @@ Route::middleware(['auth:employee', 'role:Admin'])->group(function () {
     Route::get('role-permissions/{role_id}/edit', [RoleHasPermissionController::class, 'edit'])->name('role-permissions.edit');
     Route::put('role-permissions/{role_id}', [RoleHasPermissionController::class, 'update'])->name('role-permissions.update');
 
-     // About us Routes
+    // About us Routes
     Route::resource('about', AboutUsController::class);
 
-     // Why Vihanga Routes
+    // Why Vihanga Routes
     Route::resource('highlights', HighlightController::class);
 
-     // Why Vihanga Routes
+    // Courses Routes
     Route::resource('courses', CourseController::class);
 
     // Course Phases Routes
@@ -85,14 +93,17 @@ Route::middleware(['auth:employee', 'role:Admin'])->group(function () {
     // Selection Processes Routes
     Route::resource('selection_processes', SelectionProcessController::class);
 
-       //Facilities Routes
+    // Facilities Routes
     Route::resource('facilities', FacilityController::class);
 
     // Careers Routes
     Route::resource('careers', CareerController::class);
 
     // Gallery Routes
-    Route::resource('gallery', App\Http\Controllers\GalleryController::class);
-    Route::delete('gallery/{gallery}/image', [App\Http\Controllers\GalleryController::class, 'deleteImage'])->name('gallery.deleteImage');
+    Route::resource('gallery', GalleryController::class);
+    Route::delete('gallery/{gallery}/image', [GalleryController::class, 'deleteImage'])->name('gallery.deleteImage');
+
+    // FAQ Routes
+    Route::resource('faq', FaqController::class);
 
 });
